@@ -4,6 +4,9 @@
         padding-top: 80px;
         padding-bottom: 100px;
     }
+    @include breakpoint-down($breakpoint-sm-max) {
+        padding-top: 36px;
+    }
     &__tab-link {
         font-family: $font-family-murmure;
         font-weight: 600;
@@ -14,6 +17,13 @@
         font-feature-settings: 'liga' off, 'kern' off;
         position: relative;
         margin-right: 33px;
+        &:last-child {
+            margin-right: 0;
+        }
+        @include breakpoint-down($breakpoint-sm-max) {
+            font-size: 44px;
+            margin-right: 20px;
+        }
         &.is-active {
             &:after {
                 position: absolute;

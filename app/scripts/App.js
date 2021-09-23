@@ -18,6 +18,7 @@ import tabs from './modules/tabs';
 import swiper from './modules/swiper';
 import reset from './modules/reset';
 import grid from './modules/grid';
+import menu from './modules/menu';
 
 
 

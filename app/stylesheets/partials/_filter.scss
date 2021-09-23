@@ -1,9 +1,22 @@
 .filter {
     margin: 40px 0 25px;
     z-index: 1;
+    @include breakpoint-down($breakpoint-sm-max) {
+        margin: 25px 0 25px;
+    }
     &__container {
         display: flex;
-        align-items: center
+        align-items: center;
+        @include breakpoint-down($breakpoint-sm-max) {
+            overflow: scroll;
+            margin: 0 -16px;
+            padding: 0 16px;
+            -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+            &::-webkit-scrollbar {
+                display: none;
+              }
+        }
     }
     &__search,
     &__grid {
@@ -12,7 +25,15 @@
         height: 32px;
     }
     &__grid {
-        margin-left: auto
+        margin-left: auto;
+        @include breakpoint-down($breakpoint-sm-max) {
+            order: 1;
+        }
+    }
+    &__search {
+        @include breakpoint-down($breakpoint-sm-max) {
+            order: 2;
+        }
     }
     
     &__item {
@@ -26,6 +47,11 @@
         justify-content: center;
         border-radius: 10px;
         transition: background-color $transition-duration;
+        @include breakpoint-down($breakpoint-sm-max) {
+            font-size: 16px;
+             line-height: 23px;
+             padding: 9px 10px 6px;
+        }
         &:hover,
         &:active {
             background-color: $color-white;
@@ -51,7 +77,13 @@
                     // font-weight: 500;
                     text-decoration-line: underline;
                 }
+                @include breakpoint-down($breakpoint-sm-max) {
+                    font-size: 16px;
+                     line-height: 23px;
+                     padding: 9px 10px 6px;
+                }
             }
+            
             
         }
     }
@@ -66,6 +98,9 @@
     }
     &__form {
         display: flex;
+        @include breakpoint-down($breakpoint-sm-max) {
+            order: 3;
+        }
     }
     &__inner {
         display: flex;
