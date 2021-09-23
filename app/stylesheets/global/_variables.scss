@@ -1,0 +1,98 @@
+/*========================================
+// Colors
+========================================*/
+
+$color-black: #080808;
+$color-white: #fff;
+$color-base: #002710;
+$color-eggshell: #F4F0ED;
+$color-green: #08411E;;;
+$color-beige: #FBD0B1;
+$color-burgundy: #3B0B21;;
+$color-scarlet:  #9D0000;;
+$color-blood:#E32C2C;;
+
+
+/*========================================
+// Fonts
+========================================*/
+
+$font-family-gordita: "Gordita", Helvetica, Arial, sans-serif;
+$font-family-murmure: "LeMurmureRegular", "Times New Roman", Georgia, serif;
+$font-family-base: $font-family-gordita;
+
+$font-size-base: 18px;
+$line-height-base: 26px;
+
+
+/*========================================
+// Radius
+========================================*/
+
+$border-radius: 22px;
+
+
+/*========================================
+// Browser
+========================================*/
+
+$browser-context: 16;
+
+
+/*========================================
+// Breakpoints
+========================================*/
+
+// Min
+// Extra small screen / phone
+$breakpoint-xs-min: 0;
+
+// Small screen / phone
+$breakpoint-sm-min: 544px;
+
+// Medium screen / tablet
+$breakpoint-md-min: 768px;
+
+// Large screen / desktop
+$breakpoint-lg-min: 992px;
+
+// Extra large screen / wide desktop
+$breakpoint-xl-min: 1440px;
+
+// Max
+// Extra small screen / phone
+$breakpoint-xs-max: $breakpoint-sm-min - 1;
+
+// Small screen / phone
+$breakpoint-sm-max: $breakpoint-md-min - 1;
+
+// Medium screen / tablet
+$breakpoint-md-max: $breakpoint-lg-min - 1;
+
+// Large screen / desktop
+$breakpoint-lg-max: $breakpoint-xl-min - 1;
+
+
+/*========================================
+// Grid
+========================================*/
+
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+$container-gap: 50px;
+$container-max-width: 1270px;
+
+
+/*========================================
+// Animations, transitions
+========================================*/
+
+$transition-duration: .2s;
+
+/*========================================
+// Retina
+========================================*/
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

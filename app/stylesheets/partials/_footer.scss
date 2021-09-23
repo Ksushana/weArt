@@ -1,0 +1,39 @@
+.footer {
+  background-color: $color-burgundy;
+  margin-top: auto;
+  color: $color-scarlet;
+  font-family: $font-family-murmure;
+  font-weight: 600;
+  font-size: 62px;
+  line-height: 101%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-feature-settings: 'liga' off, 'kern' off;
+  padding-top: 120px;
+  padding-bottom: 50px;
+  @include breakpoint-down($breakpoint-lg-max) {
+    // font-size: 40px;
+  }
+  @include breakpoint-down($breakpoint-md-max) {
+    // font-size: 40px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    // @include breakpoint-down($breakpoint-md-max) {
+    //   flex-direction: column;
+    // }
+  }
+  a {
+    color: $color-scarlet;
+    &:hover {
+      color: $color-blood;
+    }
+  }
+  &__title {
+    margin: 0;
+  }
+  &__block {
+    width: 50%;
+  }
+}

@@ -1,0 +1,30 @@
+.main-content
+  .main-content__container.container
+    .main-content__tab-links 
+      a.main-content__tab-link.js-tab-link.is-active(href="#tab-1") Работы
+      a.main-content__tab-link.js-tab-link(href="#tab-2") Художники
+    .main-content__filter 
+      include ./filter.pug
+    .main-content__tab-panes.tab-panes 
+      .tab-panes__item.is-active( id="tab-1" )
+        .swiper.tab-panes__list
+          .swiper-wrapper
+            .swiper-slide.tab-panes__list-item 
+              img(src="../assets/image1@1x.jpg" srcset="../assets/image1@2x.jpg x2" alt="")
+            .swiper-slide.tab-panes__list-item 
+              img(src="../assets/image2@1x.jpg" srcset="../assets/image2@2x.jpg x2" alt="")
+            .swiper-slide.tab-panes__list-item 
+              img(src="../assets/image3@1x.jpg" srcset="../assets/image3@2x.jpg x2" alt="")
+            .swiper-slide.tab-panes__list-item 
+              img(src="../assets/image4@1x.jpg" srcset="../assets/image4@2x.jpg x2" alt="")
+            .swiper-slide.tab-panes__list-item 
+              img(src="../assets/image5@1x.jpg" srcset="../assets/image5@2x.jpg x2" alt="")
+            .swiper-slide.tab-panes__list-item 
+              img(src="../assets/image6@1x.jpg" srcset="../assets/image6@2x.jpg x2" alt="")
+            .swiper-slide.tab-panes__list-item 
+              img(src="../assets/image7@1x.jpg" srcset="../assets/image7@2x.jpg x2" alt="")
+            .swiper-slide.tab-panes__list-item 
+              img(src="../assets/image8@1x.jpg" srcset="../assets/image8@2x.jpg x2" alt="")
+          
+      .tab-panes__item( id="tab-2" )
+        |2

@@ -1,0 +1,40 @@
+%container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  max-width: 1440px;
+  padding-left: $container-gap;
+  padding-right: $container-gap;
+
+  @extend %container;
+  // @include breakpoint-down($breakpoint-lg-max) {
+  //   max-width: 1440px;
+  //   padding-left: 105px;
+  //   padding-right: 105px;
+  // }
+  // @include breakpoint-down($breakpoint-md-max) {
+  //   max-width: 100%;
+  //   padding-left: 86px;
+  //   padding-right: 86px;
+  // }
+  // @include breakpoint-down(880px) {
+  //   max-width: 100%;
+  //   padding-left: 20px;
+  //   padding-right: 20px;
+  // }
+  // @include breakpoint-down($breakpoint-sm-max) {
+  // }
+}
+
+// .container-fluid {
+//   @extend %container;
+// }
+
+// .swiper-wrapper {
+//   display: grid;
+//   gap: 10px;
+//   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+//   grid-template-rows: masonry;
+// }

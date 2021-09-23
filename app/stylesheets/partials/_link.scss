@@ -1,0 +1,38 @@
+.link {
+  a {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      bottom: -3px;
+      height: 1px;
+      width: 100%;
+      background-color: transparent;
+      transition: background-color $transition-duration;
+    }
+  }
+
+  span {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      bottom: 50%;
+      height: 1px;
+      width: 100%;
+      background-color: #0f0e12;
+      transition: background-color $transition-duration;
+    }
+  }
+  &:hover {
+    a {
+      &:after {
+        background-color: #0f0e12;
+      }
+    }
+  }
+}

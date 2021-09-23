@@ -1,0 +1,30 @@
+include ./../mixins/mixins.pug
+
+include ./globalVars.pug
+
+doctype html
+
+html(lang=CURRENT_LANG)
+  include ./head.pug
+
+  body
+    block bodyStart
+
+    //- SVG store
+    .svg-store
+      include ./../../svgicons/svgicons.svg
+    //- end SVG store
+
+    block body
+
+    block bodyEnd
+
+    //- Scripts
+    block bodyVendorScripts
+    script( src="https://unpkg.com/flexmasonry/dist/flexmasonry.js" )
+    script(src=config.JS_BUNDLE)
+    
+
+    block bodyCustomScripts
+    //- end Scripts
+

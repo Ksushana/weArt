@@ -1,0 +1,96 @@
+/*========================================
+// Base
+========================================*/
+
+/*
+ You can use any css normalization here
+ (for example, https://necolas.github.io/normalize.css/)
+*/
+@import 'base/reset';
+
+
+/*========================================
+// Vendor: before our settings
+========================================*/
+
+/*
+ Sample export css file:
+ @import './../../node_modules/bootstrap/dist/css/bootstrap-grid.css';
+*/
+
+
+/*========================================
+// Iconfont
+========================================*/
+
+
+/*========================================
+// Global
+========================================*/
+
+@import 'global/functions';
+@import 'global/variables';
+@import 'global/mixins';
+@import 'global/mq-listener';
+@import 'global/typography';
+@import 'global/layout';
+@import 'global/utils';
+
+
+/*========================================
+// Fonts
+========================================*/
+
+@import 'fonts/le_murmure';
+@import 'fonts/gordita';
+
+
+/*========================================
+// Vendor
+========================================*/
+
+@import 'vendor/swiper';
+@import 'vendor/masonry';
+
+/*========================================
+// Partials
+========================================*/
+
+// Blocks
+@import 'partials/svg-clip';
+@import 'partials/svg-store';
+@import 'partials/svg-icon';
+@import 'partials/link';
+@import 'partials/tab-panes';
+@import 'partials/main-content';
+@import 'partials/filter';
+// @import 'partials/titles';
+// @import 'partials/kit';
+// @import 'partials/hero';
+// @import 'partials/about';
+// @import 'partials/navigation';
+
+
+// Sections
+
+// @import 'partials/fast-tags';
+// @import 'partials/catalog';
+// @import 'partials/product-card';
+// @import 'partials/section-title';
+// @import 'partials/information';
+// @import 'partials/categories';
+// @import 'partials/slider-aside';
+// @import 'partials/main-nav';
+// @import 'partials/useful-links';
+// @import 'partials/pages-list';
+// @import 'partials/sorting';
+// @import 'partials/catalog-fixed';
+// @import 'partials/small-fixed-header';
+// @import 'partials/totop';
+
+// Layout
+@import 'partials/container';
+@import 'partials/layout';
+@import 'partials/header';
+// @import 'partials/content';
+@import 'partials/footer';

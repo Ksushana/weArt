@@ -1,0 +1,48 @@
+.header {
+  font-family: $font-family-murmure;
+  &__container {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    .svg-icon {
+      width: 81px;
+      height: 70px;
+    }
+  }
+  &__links {
+    display: flex;
+  }
+  &__menu {
+    display: flex;
+  }
+  &__menu-item {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    padding: 6px 10px 12px;
+    border-radius: 12px;
+    background-color: transparent;
+    transition: background-color $transition-duration;
+    display: flex;
+    align-items: center;
+    height: 54px;
+    span {
+      color: $color-base;
+      transition: color $transition-duration;
+    }
+    &.is-active {
+      background-color: $color-base;
+      span {
+        color: $color-eggshell;
+      }
+    }
+  }
+  &__link {
+    margin-left: 8px;
+  }
+}
