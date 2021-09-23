@@ -1,5 +1,7 @@
 import Swiper, { Navigation} from 'swiper';
+const breakpoint = window.matchMedia( '(min-width:768px)' );
 Swiper.use([Navigation]);
+if ( breakpoint.matches === true ) {
 const swiper = new Swiper(".tab-panes__list", {
   navigation: {
     nextEl: ".tab-panes__button-next",
@@ -16,3 +18,4 @@ const swiper = new Swiper(".tab-panes__list", {
     }
   }
 });  
+}

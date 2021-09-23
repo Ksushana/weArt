@@ -1,4 +1,5 @@
 import Swiper, { Navigation} from 'swiper';
+const breakpoint = window.matchMedia( '(min-width:768px)' );
 function changeGrid() {
     const pane = document.querySelector(".tab-panes");
     Swiper.use([Navigation]);
@@ -6,22 +7,24 @@ function changeGrid() {
     const iconSlider = document.querySelector(".svg-icon--slider");
     if (pane.classList.contains("masonry")) {
         pane.classList.remove("masonry");
-        const swiper = new Swiper(".tab-panes__list", {
-        navigation: {
-            nextEl: ".tab-panes__button-next",
-            prevEl: ".tab-panes__button-prev",
-        },
-        breakpoints: {
-            320: {
-            slidesPerView: 1,
-            spaceBetween: 12
+        if ( breakpoint.matches === true ) {
+            const swiper = new Swiper(".tab-panes__list", {
+            navigation: {
+                nextEl: ".tab-panes__button-next",
+                prevEl: ".tab-panes__button-prev",
             },
-            480: {
-            slidesPerView: "auto",
-            spaceBetween: 12
+            breakpoints: {
+                320: {
+                slidesPerView: 1,
+                spaceBetween: 12
+                },
+                480: {
+                slidesPerView: "auto",
+                spaceBetween: 12
+                }
             }
-        }
-        });  
+            });
+        }  
         FlexMasonry.destroyAll();
 
         const swiperWrapper = document.querySelector(".tab-panes__list .swiper-wrapper");
@@ -29,6 +32,7 @@ function changeGrid() {
         swiperWrapper.classList.remove("flexmasonry");
         swiperWrapper.classList.remove("flexmasonry-responsive");
         swiperWrapper.classList.remove("flexmasonry-cols-3");
+        swiperWrapper.classList.remove("flexmasonry-cols-1");
         swiperSlide.classList.remove("flexmasonry-item");
         
         iconGrid.style.display="block";
