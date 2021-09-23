@@ -30,7 +30,8 @@ window.addEventListener("load", function() {
 	for (i = 0; i < myTabs.length; i++) {
 		myTabs[i].addEventListener("click", myTabClicks)
 	}
+
+
 });
 
 
-// FlexMasonry.init('.tab-panes__list .swiper-wrapper');

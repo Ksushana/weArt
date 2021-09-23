@@ -1,8 +1,7 @@
 .main-content {
-    padding-top: 113px;
-    padding-bottom: 186px;
+    padding-top: 94px;
     @include breakpoint-down($breakpoint-md-max) {
-        padding-top: 100px;
+        padding-top: 80px;
         padding-bottom: 100px;
     }
     &__tab-link {

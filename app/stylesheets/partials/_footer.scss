@@ -9,31 +9,44 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   font-feature-settings: 'liga' off, 'kern' off;
-  padding-top: 120px;
+  padding-top: 110px;
   padding-bottom: 50px;
   @include breakpoint-down($breakpoint-lg-max) {
-    // font-size: 40px;
+    font-size: 40px;
   }
   @include breakpoint-down($breakpoint-md-max) {
-    // font-size: 40px;
+    font-size: 32px;
+    line-height: 101.11%;
   }
   &__container {
     display: flex;
     align-items: center;
-    // @include breakpoint-down($breakpoint-md-max) {
-    //   flex-direction: column;
-    // }
+    @include breakpoint-down($breakpoint-md-max) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   a {
     color: $color-scarlet;
+    padding-left: 8px;
+    &:first-child {
+      padding-left: 0;
+    }
     &:hover {
       color: $color-blood;
     }
   }
   &__title {
     margin: 0;
+    font-weight: 600;
+  font-size: 62px;
+  line-height: 101%;
   }
   &__block {
     width: 50%;
+    @include breakpoint-down($breakpoint-md-max) {
+      width: 100%;
+      margin-bottom: 22px
+    }
   }
 }

@@ -3,12 +3,13 @@ header.header
     .header__logo
       +svgicon('logo')
     .header__menu
-      a.header__menu-item(href="")
+      a.header__menu-item(href="index.html" class=(isAntique ? "is-active" : null))
         span Антиквариат
-      a.header__menu-item.is-active(href="")
+      a.header__menu-item(href="artPage.html" class=(isArt ? "is-active" : null))
         span Искусство
-      a.header__menu-item(href="")
+      a.header__menu-item(href="projectPage.html" class=(isProject ? "is-active" : null))
         span Проекты
+      button.header__menu-close(type="button")
       
     .header__links
       a.header__link(href="")

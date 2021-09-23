@@ -1,5 +1,5 @@
 .filter {
-    margin: 24px 0;
+    margin: 40px 0 25px;
     z-index: 1;
     &__container {
         display: flex;
@@ -14,6 +14,7 @@
     &__grid {
         margin-left: auto
     }
+    
     &__item {
         @include button-reset-style;
         padding: 14px;
@@ -41,11 +42,13 @@
                 justify-content: center;
                 border-radius: 10px;
                 transition: background-color $transition-duration;
+                opacity:  0.4;
+                pointer-events: none;
                 &:hover,
                 &:active {
                     background-color: transparent;
                     color: $color-black;
-                    font-weight: 500;
+                    // font-weight: 500;
                     text-decoration-line: underline;
                 }
             }
@@ -83,7 +86,9 @@
         }
         &--price {
             width: 402px;
-            // overflow-y: hidden;
+            @include breakpoint-down($breakpoint-md-max) {
+                transform: translatex(-40%);
+              }
             input[type=range] {
                 -webkit-appearance: none;
                 width: 100%;
@@ -212,4 +217,8 @@
         line-height: 125%;
         font-weight: 500;
     }
+    .svg-icon--slider {
+        display: none;
+    }
+    
 }

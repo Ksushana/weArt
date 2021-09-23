@@ -44,6 +44,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
     "bootstrap": "^4.5.2",
+    "flexmasonry": "^0.2.3",
     "jquery": "^3.5.1",
     "swiper": "^6.8.4",
     "tippy.js": "^6.3.1"

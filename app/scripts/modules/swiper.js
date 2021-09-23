@@ -1,10 +1,9 @@
-import Swiper from 'swiper';
-Swiper.use([]);
+import Swiper, { Navigation} from 'swiper';
+Swiper.use([Navigation]);
 const swiper = new Swiper(".tab-panes__list", {
-  slidesPerView: 'auto', 
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".tab-panes__button-next",
+    prevEl: ".tab-panes__button-prev",
   },
   breakpoints: {
     320: {

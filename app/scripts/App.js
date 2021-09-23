@@ -9,7 +9,7 @@
 // Utils
 ========================================*/
 import swiperjs from './utils/swiper';
-import masonry from './utils/masonry';
+// import masonry from './utils/masonry';
 /*========================================
 // Modules
 ========================================*/
@@ -17,6 +17,7 @@ import masonry from './utils/masonry';
 import tabs from './modules/tabs';
 import swiper from './modules/swiper';
 import reset from './modules/reset';
+import grid from './modules/grid';
 
 
 
