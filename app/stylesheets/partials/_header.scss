@@ -6,12 +6,20 @@
     padding-bottom: 32px;
     justify-content: space-between;
     align-items: center;
+    @include breakpoint-down($breakpoint-sm-max) {
+      padding-top: 17px;
+      padding-bottom: 17px;
+    }
   }
   &__logo {
     z-index: 100;
     .svg-icon {
       width: 81px;
       height: 70px;
+      @include breakpoint-down($breakpoint-sm-max) {
+        max-width: 55px;
+      height: 36px;
+      }
     }
   }
   &__links {
@@ -19,9 +27,9 @@
   }
   &__menu {
     display: flex;
-    @include breakpoint-down($breakpoint-md-max) {
-      // opacity: 0;
-      // transform: translateY(-100%);
+    @include breakpoint-down($breakpoint-sm-max) {
+      opacity: 0;
+      transform: translateY(-100%);
       flex-direction: column;
       width: 100vw;
       height: 100vh;
@@ -60,9 +68,13 @@
   }
   &__menu-close {
     display: none;
-    @include breakpoint-down($breakpoint-md-max) {
+    @include breakpoint-down($breakpoint-sm-max) {
       display: block;
       position: absolute;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: $color-base;
     }
   }
   &__link {
