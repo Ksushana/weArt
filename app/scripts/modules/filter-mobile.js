@@ -1,0 +1,54 @@
+const openbtns = document.querySelectorAll('.filter__item');
+const filters = document.querySelectorAll('.filter__inner');
+
+const bodyScrollLock = require('body-scroll-lock');
+const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+const enableBodyScroll = bodyScrollLock.enableBodyScroll;
+
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
+
+function closeAllFilters() {
+    filters.forEach(filter => {
+        filter.classList.remove("is-shown");
+    });
+}
+
+
+openbtns.forEach(btn => {
+    const parent = btn.parentNode;
+    const filter = parent.querySelector('.filter__inner');
+    
+    function openFilter() {
+        closeAllFilters();
+        filter.classList.add("is-shown");
+        disableBodyScroll(filter);
+    }
+    function closeFilter() {
+        filter.classList.remove("is-shown");
+        
+        enableBodyScroll(filter);
+    }
+    filter.addEventListener('touchstart', function(event) {
+        touchstartX = event.changedTouches[0].screenX;
+        touchstartY = event.changedTouches[0].screenY;
+    }, false);
+    filter.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        touchendY = event.changedTouches[0].screenY;
+        handleGesture();
+    }, false); 
+    function handleGesture() {
+    
+    if (touchendY > touchstartY + 50) {
+        closeFilter();
+        
+    }
+  
+}
+    
+    btn.addEventListener("click", openFilter);
+    document.addEventListener('swiped-down', closeFilter);
+});

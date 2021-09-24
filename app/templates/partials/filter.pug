@@ -6,48 +6,60 @@
         .filter__block
             button.filter__item.filter__item--artist(type="button") Художник
             .filter__inner.filter__inner--artists 
-                input( type="checkbox" id="artist1" name="artist" value="artist1" )
-                label( for="artist1" ) Жан Баптист Крутон
-                input( type="checkbox" id="artist2" name="artist" value="artist2" )
-                label( for="artist2" ) Шалфей Анатомик
-                input( type="checkbox" id="artist3" name="artist" value="artist3" )
-                label( for="artist3" ) Бизэ Зефир
-                input( type="checkbox" id="artist4" name="artist" value="artist4" )
-                label( for="artist4" ) Антонио Маргулис
-                input( type="checkbox" id="artist5" name="artist" value="artist5" )
-                label( for="artist5" ) Crispy Wonton
-                input( type="checkbox" id="artist6" name="artist" value="artist6" )
-                label( for="artist6" ) Kate Frizalis
-                input( type="checkbox" id="artist7" name="artist" value="artist7" )
-                label( for="artist7" ) Antosha Anis
-                input( type="checkbox" id="artist8" name="artist" value="artist8" )
-                label( for="artist8" ) Vladimir Putin
-                input( type="checkbox" id="artist9" name="artist" value="artist9" )
-                label( for="artist9" ) Olivier De San Kruzo Junior
-                input( type="checkbox" id="artist10" name="artist" value="artist10" )
-                label( for="artist10" ) Saint Joseph
-                input( type="checkbox" id="artist11" name="artist" value="artist11" )
-                label( for="artist11" ) Биг Мамба
-                input( type="checkbox" id="artist12" name="artist" value="artist12" )
-                label( for="artist12" ) Кеша Воробьянов
+                .filter__scroll-block
+                    input( type="checkbox" id="artist1" name="artist" value="artist1" )
+                    label( for="artist1" ) Жан Баптист Крутон
+                    input( type="checkbox" id="artist2" name="artist" value="artist2" )
+                    label( for="artist2" ) Шалфей Анатомик
+                    input( type="checkbox" id="artist3" name="artist" value="artist3" )
+                    label( for="artist3" ) Бизэ Зефир
+                    input( type="checkbox" id="artist4" name="artist" value="artist4" )
+                    label( for="artist4" ) Антонио Маргу    лис
+                    input( type="checkbox" id="artist5" name="artist" value="artist5" )
+                    label( for="artist5" ) Crispy Wonton
+                    input( type="checkbox" id="artist6" name="artist" value="artist6" )
+                    label( for="artist6" ) Kate Frizalis
+                    input( type="checkbox" id="artist7" name="artist" value="artist7" )
+                    label( for="artist7" ) Antosha Anis
+                    input( type="checkbox" id="artist8" name="artist" value="artist8" )
+                    label( for="artist8" ) Vladimir Putin
+                    input( type="checkbox" id="artist9" name="artist" value="artist9" )
+                    label( for="artist9" ) Olivier De San Kruzo Junior
+                    input( type="checkbox" id="artist10" name="artist" value="artist10" )
+                    label( for="artist10" ) Saint Joseph
+                    input( type="checkbox" id="artist11" name="artist" value="artist11" )
+                    label( for="artist11" ) Биг Мамба
+                    input( type="checkbox" id="artist12" name="artist" value="artist12" )
+                    label( for="artist12" ) Кеша Воробьянов
+                .filter__inner__mobile-btns  
+                  button.filter__inner--reset(type="button") Сбросить
+                  button.filter__inner--show(type="button") Показать
         .filter__block
             button.filter__item.filter__item--technics(type="button") Техника
             .filter__inner 
-                input( type="checkbox" id="technics1" name="technics" value="technics1" )
-                label( for="technics1" ) Масло
-                input( type="checkbox" id="technics2" name="technics" value="technics2" )
-                label( for="technics2" ) Графика
-                input( type="checkbox" id="technics3" name="technics" value="technics3" )
-                label( for="technics3" ) Гравюры
+                .filter__scroll-block
+                    input( type="checkbox" id="technics1" name="technics" value="technics1" )
+                    label( for="technics1" ) Масло
+                    input( type="checkbox" id="technics2" name="technics" value="technics2" )
+                    label( for="technics2" ) Графика
+                    input( type="checkbox" id="technics3" name="technics" value="technics3" )
+                    label( for="technics3" ) Гравюры
+                .filter__inner__mobile-btns  
+                  button.filter__inner--reset(type="button") Сбросить
+                  button.filter__inner--show(type="button") Показать
         .filter__block
             button.filter__item.filter__item--size(type="button") Размер
             .filter__inner 
-                input( type="checkbox" id="size1" name="size" value="size1" )
-                label( for="size1" ) Большие
-                input( type="checkbox" id="size2" name="size" value="size2" )
-                label( for="size2" ) Маленькие
-                input( type="checkbox" id="size3" name="size" value="size3" )
-                label( for="size3" ) Средние
+                .filter__scroll-block
+                    input( type="checkbox" id="size1" name="size" value="size1" )
+                    label( for="size1" ) Большие
+                    input( type="checkbox" id="size2" name="size" value="size2" )
+                    label( for="size2" ) Маленькие
+                    input( type="checkbox" id="size3" name="size" value="size3" )
+                    label( for="size3" ) Средние
+                .filter__inner__mobile-btns  
+                  button.filter__inner--reset(type="button") Сбросить
+                  button.filter__inner--show(type="button") Показать
         .filter__block
             button.filter__item.filter__item--price(type="button") Цена
             .filter__inner.filter__inner--price 
@@ -55,7 +67,7 @@
                     span Р 10,500
                     span Р 683,284
                 input(type="range" min="10.500" max="Р 683.284" step="0.01")
-        input.filter__item.filter__item--reset(id="reset" type="reset") 
+        input.filter__item.filter__item--reset.is-disabled(id="reset" type="reset") 
         label( for="reset" ) Сбросить
     button.filter__grid(type="button")
       +svgicon('grid')
