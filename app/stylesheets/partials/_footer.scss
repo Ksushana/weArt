@@ -18,6 +18,9 @@
     font-size: 32px;
     line-height: 101.11%;
   }
+  @include breakpoint-down($breakpoint-sm-max) {
+    padding-top: 25px;
+  }
   &__container {
     display: flex;
     align-items: center;
@@ -41,6 +44,11 @@
     font-weight: 600;
   font-size: 62px;
   line-height: 101%;
+  @include breakpoint-down($breakpoint-sm-max) {
+    font-size: 32px;
+    line-height: 101.11%;
+  }
+  
   }
   &__block {
     width: 50%;

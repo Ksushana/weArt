@@ -5,6 +5,7 @@ const bodyScrollLock = require('body-scroll-lock');
 const disableBodyScroll = bodyScrollLock.disableBodyScroll;
 const enableBodyScroll = bodyScrollLock.enableBodyScroll;
 
+const breakpoint = window.matchMedia( '(max-width:768px)' );
 let touchstartX = 0;
 let touchstartY = 0;
 let touchendX = 0;
@@ -16,7 +17,6 @@ function closeAllFilters() {
     });
 }
 
-
 openbtns.forEach(btn => {
     const parent = btn.parentNode;
     const filter = parent.querySelector('.filter__inner');
@@ -24,30 +24,34 @@ openbtns.forEach(btn => {
     function openFilter() {
         closeAllFilters();
         filter.classList.add("is-shown");
+        if ( breakpoint.matches === true ) {
         disableBodyScroll(filter);
+        }
     }
+
     function closeFilter() {
         filter.classList.remove("is-shown");
-        
+        if ( breakpoint.matches === true ) {
         enableBodyScroll(filter);
+        }
     }
+
     filter.addEventListener('touchstart', function(event) {
         touchstartX = event.changedTouches[0].screenX;
         touchstartY = event.changedTouches[0].screenY;
     }, false);
+
     filter.addEventListener('touchend', function(event) {
         touchendX = event.changedTouches[0].screenX;
         touchendY = event.changedTouches[0].screenY;
         handleGesture();
     }, false); 
+
     function handleGesture() {
-    
-    if (touchendY > touchstartY + 50) {
-        closeFilter();
-        
+        if (touchendY > touchstartY + 50) {
+            closeFilter();
+        }
     }
-  
-}
     
     btn.addEventListener("click", openFilter);
     document.addEventListener('swiped-down', closeFilter);

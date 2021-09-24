@@ -6,6 +6,7 @@
     }
     @include breakpoint-down($breakpoint-sm-max) {
         padding-top: 36px;
+        padding-bottom: 60px;
     }
     &__tab-link {
         font-family: $font-family-murmure;
