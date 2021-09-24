@@ -5,10 +5,10 @@ function changeGrid() {
     Swiper.use([Navigation]);
     const iconGrid = document.querySelector(".svg-icon--grid");
     const iconSlider = document.querySelector(".svg-icon--slider");
-    if (pane.classList.contains("masonry")) {
-        pane.classList.remove("masonry");
-        if ( breakpoint.matches === true ) {
-            const swiper = new Swiper(".tab-panes__list", {
+    let gallery;
+    const galleryWrapper = document.querySelector(".swiper-wrapper");
+    function createNew() {
+        gallery = new Swiper(".tab-panes__list", {
             navigation: {
                 nextEl: ".tab-panes__button-next",
                 prevEl: ".tab-panes__button-prev",
@@ -24,9 +24,13 @@ function changeGrid() {
                 }
             }
             });
-        }  
-        FlexMasonry.destroyAll();
+    }
 
+    function destroy() {
+        galleryWrapper.classList.add( "disabled" );
+    }
+
+    function delMasonry() {
         const swiperWrapper = document.querySelector(".tab-panes__list .swiper-wrapper");
         const swiperSlide = document.querySelector(".tab-panes__list .swiper-slide");
         swiperWrapper.classList.remove("flexmasonry");
@@ -34,12 +38,22 @@ function changeGrid() {
         swiperWrapper.classList.remove("flexmasonry-cols-3");
         swiperWrapper.classList.remove("flexmasonry-cols-1");
         swiperSlide.classList.remove("flexmasonry-item");
-        
+    }
+
+    if (pane.classList.contains("masonry")) {
+        galleryWrapper.classList.remove( "disabled" );
+        pane.classList.remove("masonry");
+        if ( breakpoint.matches === true ) {
+            createNew();
+        }  
+        FlexMasonry.destroyAll();
+        delMasonry()
         iconGrid.style.display="block";
         iconSlider.style.display="none";
     } else {
+        
+        destroy();
         pane.classList.add("masonry");
-        // swiper.destroy( true, true );
         FlexMasonry.init('.tab-panes__list .swiper-wrapper', {
             responsive: true,
             breakpointCols: {

@@ -17,6 +17,9 @@
         }
     }
     &__list {
+        .swiper-wrapper.disabled {
+            transform: translate3d(0px, 0, 0) !important;
+        }
         @include breakpoint-down($breakpoint-sm-max) {
             .swiper-wrapper {
                 overflow-y: scroll;
@@ -140,7 +143,7 @@
 
     &.masonry {
         .tab-panes__list-item{
-            margin-bottom: 12px;
+            padding-bottom: 12px;
             img {
             width: 100%;
             height: auto;
@@ -151,6 +154,7 @@
             .tab-panes__list-link {
                 padding: 16px;
                 padding-right: 0;
+                bottom: 12px;
             }
             .tab-panes__list-link-price {
                 bottom: unset;
