@@ -13,7 +13,7 @@
             margin-bottom: 0;
         }
         @include breakpoint-down($breakpoint-sm-max) {
-            height: 340px;
+            height: auto;
         }
     }
     &__list {
@@ -22,12 +22,7 @@
         }
         @include breakpoint-down($breakpoint-sm-max) {
             .swiper-wrapper {
-                overflow-y: scroll;
-                margin: 0 -16px;
-                padding: 0 16px;
-                &::-webkit-scrollbar {
-                    display: none;
-                  }
+                flex-direction: column;
             }
         } 
     }
@@ -46,8 +41,12 @@
             height: 500px;
         }
         @include breakpoint-down($breakpoint-sm-max) {
-            height: 340px;
-            margin-right: 8px;
+            height: auto;
+            width: 100%;
+            margin-bottom: 12px;
+            img {
+                width: 100%;
+            }
         }
     }
 
@@ -65,6 +64,7 @@
         padding: 36px;
         @include breakpoint-down($breakpoint-sm-max) {
             padding: 16px;
+            opacity: 1;
         }
         &-title {
             margin-top: auto;
@@ -74,6 +74,9 @@
             display: block;
             margin-bottom: 8px;
             color: $color-beige;
+            @include breakpoint-down($breakpoint-sm-max) {
+                width: 100%;
+            }
         }
         &-author {
             font-family: $font-family-murmure;
@@ -87,6 +90,7 @@
             @include breakpoint-down($breakpoint-sm-max) {
                 padding-right: 0;
                 font-size: 30px;
+                width: 100%;
             }
         }
         &-price {
@@ -102,11 +106,34 @@
             right: 36px;
             border-radius: 12px;
             @include breakpoint-down($breakpoint-sm-max) {
-                bottom: unset;
-                top: 16px;
-                right: 16px;
+                position: static;
+                width: fit-content;
+                height: 33px;
+                padding: 7px 9px 6px;
+                font-size: 14px;
+                line-height: 20px;
+                border-radius: 8px;
             }
         }
+    }
+
+    &__mobile-link {
+        display: none;
+        @include breakpoint-down($breakpoint-sm-max) {
+            display: inline;
+            height: 33px;
+            color: $color-white;
+            background-color: $color-green;
+            padding: 7px 9px 6px;
+            font-size: 14px;
+            line-height: 20px;
+            border-radius: 8px;
+        }
+    }
+
+    &__btns-cover {
+        display: block;
+        margin-top: 8px;
     }
 
     .swiper-button-prev,

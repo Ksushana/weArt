@@ -31,6 +31,12 @@
                     label( for="artist11" ) Биг Мамба
                     input( type="checkbox" id="artist12" name="artist" value="artist12" )
                     label( for="artist12" ) Кеша Воробьянов
+                    input( type="checkbox" id="artist10" name="artist" value="artist10" )
+                    label( for="artist10" ) Saint Joseph
+                    input( type="checkbox" id="artist11" name="artist" value="artist11" )
+                    label( for="artist11" ) Биг Мамба
+                    input( type="checkbox" id="artist12" name="artist" value="artist12" )
+                    label( for="artist12" ) Кеша Воробьянов
                 .filter__inner__mobile-btns  
                   button.filter__inner--reset(type="button") Сбросить
                   button.filter__inner--show(type="button") Показать
@@ -65,8 +71,12 @@
             .filter__inner.filter__inner--price 
                 .filter__range-labels 
                     span Р 10,500
-                    span Р 683,284
-                input(type="range" min="10.500" max="Р 683.284" step="0.01")
+                    span Р 
+                      input( type="text" id="rangenumber" min="0" max="" value="330" oninput="range.value=value")
+                input#range(type="range" min="10.500" max="683.284" value="50%" step="0.01" oninput="rangenumber.value=value")
+                .filter__inner__mobile-btns  
+                  button.filter__inner--reset(type="button") Сбросить
+                  button.filter__inner--show(type="button") Показать
         input.filter__item.filter__item--reset.is-disabled(id="reset" type="reset") 
         label( for="reset" ) Сбросить
     button.filter__grid(type="button")

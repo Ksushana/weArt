@@ -21,7 +21,7 @@ import reset from './modules/reset';
 import grid from './modules/grid';
 import menu from './modules/menu';
 import filter from './modules/filter-mobile';
-
+import range from './modules/range';
 
 /*========================================
 // Run Application

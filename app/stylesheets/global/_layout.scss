@@ -8,6 +8,7 @@ html, body {
 
 body {
   min-width: rem(320px);
+  width: 100vw;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -24,4 +25,24 @@ body {
   margin: -1px;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.popup-cover {
+  display: none;
+  @include breakpoint-down($breakpoint-sm-max) {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: #08411E;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $transition-duration;
+    &.is-shown {
+      opacity: 0.45;
+    }
+  }
 }

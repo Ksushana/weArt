@@ -1,21 +1,22 @@
 import Swiper, { Navigation} from 'swiper';
 const breakpoint = window.matchMedia( '(min-width:768px)' );
-Swiper.use([Navigation]);
+
 if ( breakpoint.matches === true ) {
-const swiper = new Swiper(".tab-panes__list", {
-  navigation: {
-    nextEl: ".tab-panes__button-next",
-    prevEl: ".tab-panes__button-prev",
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 12
+    Swiper.use([Navigation]);
+    const swiper = new Swiper(".tab-panes__list", {
+    navigation: {
+        nextEl: ".tab-panes__button-next",
+        prevEl: ".tab-panes__button-prev",
     },
-    480: {
-      slidesPerView: "auto",
-      spaceBetween: 12
+    breakpoints: {
+        320: {
+        slidesPerView: 1,
+        spaceBetween: 120
+        },
+        768: {
+        slidesPerView: "auto",
+        spaceBetween: 12
+        }
     }
-  }
-});  
+    });  
 }

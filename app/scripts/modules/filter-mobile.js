@@ -4,6 +4,7 @@ const filters = document.querySelectorAll('.filter__inner');
 const bodyScrollLock = require('body-scroll-lock');
 const disableBodyScroll = bodyScrollLock.disableBodyScroll;
 const enableBodyScroll = bodyScrollLock.enableBodyScroll;
+const popupCover = document.querySelector('.popup-cover');
 
 const breakpoint = window.matchMedia( '(max-width:768px)' );
 let touchstartX = 0;
@@ -14,6 +15,7 @@ let touchendY = 0;
 function closeAllFilters() {
     filters.forEach(filter => {
         filter.classList.remove("is-shown");
+        popupCover.classList.remove("is-shown");
     });
 }
 
@@ -24,6 +26,7 @@ openbtns.forEach(btn => {
     function openFilter() {
         closeAllFilters();
         filter.classList.add("is-shown");
+        popupCover.classList.add("is-shown");
         if ( breakpoint.matches === true ) {
         disableBodyScroll(filter);
         }
@@ -31,6 +34,7 @@ openbtns.forEach(btn => {
 
     function closeFilter() {
         filter.classList.remove("is-shown");
+        popupCover.classList.remove("is-shown");
         if ( breakpoint.matches === true ) {
         enableBodyScroll(filter);
         }
