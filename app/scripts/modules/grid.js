@@ -67,4 +67,6 @@ function changeGrid() {
     }
 }
 const togglebtn = document.querySelector(".filter__grid");
-togglebtn.addEventListener("click", changeGrid)
+if (togglebtn !== null)  {
+  togglebtn.addEventListener("click", changeGrid);
+}
