@@ -1,0 +1,16 @@
+.filter.filter--author
+  .filter__container
+    button.filter__search(type="button")
+      +svgicon('search')
+    form.filter__form(method="post") 
+        .filter__item
+            input(type="radio" name="author-tab" value="" id="author-all")
+            label(for="author-all") Все
+        .filter__item
+            input(type="radio" name="author-tab" value="" id="author-photo")
+            label(for="author-photo") Фотографы
+        .filter__item
+            input(type="radio" name="author-tab" value="" id="author-artist")
+            label(for="author-artist") Художники
+        input.filter__item.filter__item--reset(id="reset" type="reset") 
+        label( for="reset" ) Сбросить

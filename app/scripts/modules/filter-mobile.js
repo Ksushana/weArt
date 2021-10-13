@@ -40,16 +40,20 @@ if (filter !== null)  {
             }
         }
 
-        filter.addEventListener('touchstart', function(event) {
-            touchstartX = event.changedTouches[0].screenX;
-            touchstartY = event.changedTouches[0].screenY;
-        }, false);
+        if (filter) {
+            filter.addEventListener('touchstart', function(event) {
+                touchstartX = event.changedTouches[0].screenX;
+                touchstartY = event.changedTouches[0].screenY;
+            }, false);
+    
+            filter.addEventListener('touchend', function(event) {
+                touchendX = event.changedTouches[0].screenX;
+                touchendY = event.changedTouches[0].screenY;
+                handleGesture();
+            }, false); 
+        }
 
-        filter.addEventListener('touchend', function(event) {
-            touchendX = event.changedTouches[0].screenX;
-            touchendY = event.changedTouches[0].screenY;
-            handleGesture();
-        }, false); 
+      
 
         function handleGesture() {
             if (touchendY > touchstartY + 50) {

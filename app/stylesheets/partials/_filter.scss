@@ -229,7 +229,7 @@
                 transition: background-image $transition-duration;
             }
         }
-        input[type="checkbox"] {
+        input[type="checkbox"]{
             display: none;
         }
         input:checked + label:before {
@@ -341,5 +341,11 @@
         overflow: scroll;
         margin-right: -16px;
         padding-right: 16px;
+    }
+
+    &--author {
+        input[type="radio"] {
+            display: none;
+        }
     }
 }
