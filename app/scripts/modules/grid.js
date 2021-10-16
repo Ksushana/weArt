@@ -1,5 +1,6 @@
 import Swiper, { Navigation} from 'swiper';
 const breakpoint = window.matchMedia( '(min-width:768px)' );
+const togglebtn = document.querySelector(".filter__grid");
 function changeGrid() {
     const pane = document.querySelector(".tab-panes");
     Swiper.use([Navigation]);
@@ -50,6 +51,9 @@ function changeGrid() {
         delMasonry()
         iconGrid.style.display="block";
         iconSlider.style.display="none";
+       
+        togglebtn.classList.remove("gridView");
+        togglebtn.classList.add("sliderView");
     } else {
         
         destroy();
@@ -64,9 +68,11 @@ function changeGrid() {
         });
         iconGrid.style.display="none";
         iconSlider.style.display="block";
+        togglebtn.classList.add("gridView");
+        togglebtn.classList.remove("sliderView");
     }
 }
-const togglebtn = document.querySelector(".filter__grid");
+
 if (togglebtn !== null)  {
   togglebtn.addEventListener("click", changeGrid);
 }

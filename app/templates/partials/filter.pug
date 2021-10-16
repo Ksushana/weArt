@@ -4,7 +4,7 @@
       +svgicon('search')
     form.filter__form(method="post") 
         .filter__block
-            button.filter__item.filter__item--artist(type="button") Художник
+            button.filter__item.filter__item--submenu.filter__item--artist(type="button") Художник
             .filter__inner.filter__inner--artists 
                 .filter__scroll-block
                     input( type="checkbox" id="artist1" name="artist" value="artist1" )
@@ -41,7 +41,7 @@
                   button.filter__inner--reset(type="button") Сбросить
                   button.filter__inner--show(type="button") Показать
         .filter__block
-            button.filter__item.filter__item--technics(type="button") Техника
+            button.filter__item.filter__item--submenu.filter__item--technics(type="button") Техника
             .filter__inner 
                 .filter__scroll-block
                     input( type="checkbox" id="technics1" name="technics" value="technics1" )
@@ -54,7 +54,7 @@
                   button.filter__inner--reset(type="button") Сбросить
                   button.filter__inner--show(type="button") Показать
         .filter__block
-            button.filter__item.filter__item--size(type="button") Размер
+            button.filter__item.filter__item--submenu.filter__item--size(type="button") Размер
             .filter__inner 
                 .filter__scroll-block
                     input( type="checkbox" id="size1" name="size" value="size1" )
@@ -67,7 +67,7 @@
                   button.filter__inner--reset(type="button") Сбросить
                   button.filter__inner--show(type="button") Показать
         .filter__block
-            button.filter__item.filter__item--price(type="button") Цена
+            button.filter__item.filter__item--submenu.filter__item--price(type="button") Цена
             .filter__inner.filter__inner--price 
                 .filter__range-labels 
                     span Р 10,500
@@ -79,7 +79,7 @@
                   button.filter__inner--show(type="button") Показать
         input.filter__item.filter__item--reset.is-disabled(id="reset" type="reset") 
         label( for="reset" ) Сбросить
-    button.filter__grid(type="button")
+    button.filter__grid.sliderView(type="button")
       +svgicon('grid')
       +svgicon('slider')
     
