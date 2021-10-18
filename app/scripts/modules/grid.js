@@ -76,3 +76,6 @@ function changeGrid() {
 if (togglebtn !== null)  {
   togglebtn.addEventListener("click", changeGrid);
 }
+
+
+window.changeGrid = changeGrid;
