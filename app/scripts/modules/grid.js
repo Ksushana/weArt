@@ -79,3 +79,16 @@ if (togglebtn !== null)  {
 
 
 window.changeGrid = changeGrid;
+
+function uploadMoreMasonryItems() {
+        FlexMasonry.init('.tab-panes__list .swiper-wrapper', {
+            responsive: true,
+            breakpointCols: {
+                'min-width: 768px': 3,
+                'min-width: 576px': 2,
+                'min-width: 320px': 1,
+            },
+        });
+}
+
+window.changeGrid = uploadMoreMasonryItems;
