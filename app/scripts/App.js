@@ -11,6 +11,7 @@
 import swiperjs from './utils/swiper';
 // import masonry from './utils/masonry';
 import swipeEvent from './utils/swipe-event';
+import responsive from './utils/responsive';
 /*========================================
 // Modules
 ========================================*/
