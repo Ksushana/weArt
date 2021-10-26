@@ -46,7 +46,8 @@
     "body-scroll-lock": "^4.0.0-beta.0",
     "bootstrap": "^4.5.2",
     "flexmasonry": "^0.2.3",
-    "jquery": "^3.5.1",
+    "jquery": "^3.6.0",
+    "masonry-layout": "^4.2.2",
     "swiper": "^6.8.4",
     "tippy.js": "^6.3.1"
   },

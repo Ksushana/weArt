@@ -199,33 +199,45 @@
   }
 
   &.masonry {
-    .tab-panes__list-item {
-      padding-bottom: 12px;
+    .grid-item {
+      float: left;
+      width: 32%;
+      height: fit-content;
+      margin-bottom: 1vw;
+      @include breakpoint-down($breakpoint-md-max) {
+        width: 48%;
+      }
       img {
-        width: 100%;
         height: auto;
+        width: 100%;
       }
-      .tab-panes__list-link-author {
-        font-size: 30px;
-      }
-      .tab-panes__list-link {
-        padding: 16px;
-        padding-right: 0;
-        bottom: 12px;
-      }
-      .tab-panes__list-link-price {
-        bottom: unset;
-        top: 16px;
-        right: 16px;
-        padding: 8px;
-        line-height: 18px;
+      a {
+        height: 100%;
+        width: 100%;
       }
     }
     .tab-panes__item {
       height: auto;
     }
+    .tab-panes__list-link-author {
+      font-size: 30px;
+    }
+    .tab-panes__list-link {
+      padding: 16px;
+      padding-right: 0;
+      bottom: 12px;
+    }
+    .tab-panes__list-link-price {
+      bottom: unset;
+      top: 16px;
+      right: 16px;
+      padding: 8px;
+      line-height: 18px;
+    }
+
     .swiper-button-prev,
-    .swiper-button-next {
+    .swiper-button-next,
+    .tab-panes__button-upload {
       display: none;
     }
     @include breakpoint-down($breakpoint-sm-max) {

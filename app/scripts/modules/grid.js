@@ -1,6 +1,11 @@
 import Swiper, { Navigation} from 'swiper';
+import {$,jQuery} from 'jquery';
+// export for others scripts to use
+window.$ = $;
+window.jQuery = jQuery;
 const breakpoint = window.matchMedia( '(min-width:768px)' );
 const togglebtn = document.querySelector(".filter__grid");
+const swiperWrapper = document.querySelector(".tab-panes__list .swiper-wrapper");
 function changeGrid() {
     const pane = document.querySelector(".tab-panes");
     Swiper.use([Navigation]);
@@ -32,44 +37,37 @@ function changeGrid() {
     }
 
     function delMasonry() {
-        const swiperWrapper = document.querySelector(".tab-panes__list .swiper-wrapper");
+        msnry.destroy()
         const swiperSlide = document.querySelector(".tab-panes__list .swiper-slide");
-        swiperWrapper.classList.remove("flexmasonry");
-        swiperWrapper.classList.remove("flexmasonry-responsive");
-        swiperWrapper.classList.remove("flexmasonry-cols-3");
-        swiperWrapper.classList.remove("flexmasonry-cols-1");
-        swiperSlide.classList.remove("flexmasonry-item");
     }
+       const elem = document.querySelector('.grid');
+        const msnry = new Masonry( elem, {
+        itemSelector: '.grid-item',
+        });
 
-    if (pane.classList.contains("masonry")) {
+    if (!pane.classList.contains("masonry")) {
+        destroy();
+        pane.classList.add("masonry");
+        const msnry = new Masonry( elem, {
+            itemSelector: '.grid-item',
+            });
+        iconGrid.style.display="none";
+        iconSlider.style.display="block";
+        togglebtn.classList.add("gridView");
+        togglebtn.classList.remove("sliderView");
+        
+    } else {
         galleryWrapper.classList.remove( "disabled" );
         pane.classList.remove("masonry");
         if ( breakpoint.matches === true ) {
             createNew();
         }  
-        FlexMasonry.destroyAll();
         delMasonry()
         iconGrid.style.display="block";
         iconSlider.style.display="none";
        
         togglebtn.classList.remove("gridView");
         togglebtn.classList.add("sliderView");
-    } else {
-        
-        destroy();
-        pane.classList.add("masonry");
-        FlexMasonry.init('.tab-panes__list .swiper-wrapper', {
-            responsive: true,
-            breakpointCols: {
-                'min-width: 768px': 3,
-                'min-width: 576px': 2,
-                'min-width: 320px': 1,
-            },
-        });
-        iconGrid.style.display="none";
-        iconSlider.style.display="block";
-        togglebtn.classList.add("gridView");
-        togglebtn.classList.remove("sliderView");
     }
 }
 
@@ -78,14 +76,25 @@ if (togglebtn !== null)  {
 }
 
 function uploadMoreMasonryItems() {
-    FlexMasonry.init('.tab-panes__list .swiper-wrapper', {
-        responsive: true,
-        breakpointCols: {
-            'min-width: 768px': 3,
-            'min-width: 576px': 2,
-            'min-width: 320px': 1,
-        },
-    });
+    const elem = document.querySelector('.grid');
+        const msnry = new Masonry( elem, {
+        itemSelector: '.grid-item',
+        });
 }
 
-window.changeGrid = uploadMoreMasonryItems;
+window.uploadMore = uploadMoreMasonryItems;
+
+// function appendMoreMasonryItems() {
+//     var elems = [];
+//     var fragment = document.createDocumentFragment();
+//     for ( var i = 0; i < 3; i++ ) {
+//       var elem = getItemElement();
+//       fragment.appendChild( elem );
+//       elems.push( elem );
+//     }
+//     grid.appendChild( fragment );
+//     msnry.appended( elems );
+// }
+
+// window.uploadMoreAppend = uploadMoreMasonryItems;
+
