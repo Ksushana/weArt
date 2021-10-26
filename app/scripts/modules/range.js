@@ -10,10 +10,15 @@ if (rangeInputs !== null && rangeInputs.length > 0) {
     const max = target.max
     const val = target.value
     
-    target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
+    target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%';
+    const newVal = new Intl.NumberFormat('de-DE').format(val)
+    rangenumber.value = newVal;
+
   }
 
   rangeInputs.forEach(input => {
     input.addEventListener('input', handleInputChange)
   })
 }
+
+
