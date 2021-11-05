@@ -93,10 +93,11 @@
             input.checkout__form-input( type="radio" name="payment" id="card" )
             label.checkout__form-label( for="card" ) Картой курьеру
       fieldset
-        .form__field
-          input.checkout__form-input( type="checkbox" name="payment" id="subscribe" )
-          label.checkout__form-label( for="subscribe" ) Я готов получать всякие оповещения и предложения 
-        .form__field
-          input.checkout__form-input( type="checkbox" name="payment" id="terms" )
-          label.checkout__form-label( for="terms" ) Я соглашаюсь с Terms & Conditions
-      input(type="submit" value="Оформить заказ") 
+        .checkout__checkboxes
+          .form__field
+            input.checkout__form-input( type="checkbox" name="payment" id="subscribe" )
+            label.checkout__form-label( for="subscribe" ) Я готов получать всякие оповещения и предложения 
+          .form__field
+            input.checkout__form-input( type="checkbox" name="payment" id="terms" )
+            label.checkout__form-label( for="terms" ) Я соглашаюсь с Terms & Conditions
+      input.checkout__submit-btn(type="submit" value="Оформить заказ") 
