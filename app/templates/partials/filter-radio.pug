@@ -1,8 +1,11 @@
 .filter.filter--author
   .filter__container
-    button.filter__search(type="button")
-      +svgicon('search')
+    label.filter__search-svg(for="search-input-authors") 
+        +svgicon('search')
+    input.filter__search(type="checkbox" name="search" id="search-input-authors")
     form.filter__form(method="post") 
+        .filter__search-input 
+            input(type="search")
         .filter__item
             input(type="radio" name="author-tab" value="" id="author-all")
             label(for="author-all") Все

@@ -30,9 +30,66 @@
       display: none;
     }
   }
-  &__search {
+
+  &__search-svg {
+    z-index: 101;
     @include breakpoint-down($breakpoint-sm-max) {
       order: 2;
+      z-index: 101;
+    }
+  }
+
+  &__search-input {
+    width: 0px;
+    position: absolute;
+    transition: width $transition-duration;
+    height: 100%;
+    left: 0;
+    background-color: #f4f0ed;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    &:after {
+      background-color: #f4f0ed;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      content: "";
+      background-repeat: no-repeat;
+      background-position: center;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjIwMDIgMTEuMkwyMC44MDAyIDIwLjhNMjAuODAwMiAxMS4yTDExLjIwMDIgMjAuOCIgc3Ryb2tlPSIjMDAyNzEwIiBzdHJva2Utd2lkdGg9IjEuNjgiLz4KPC9zdmc+Cg==");
+    }
+    input {
+      @include input-reset-style;
+      font-size: 18px;
+      line-height: 26px;
+      border-bottom: 2px solid rgba(8, 8, 8, 0.1);
+      font-weight: 500;
+      @include breakpoint-down($breakpoint-sm-max) {
+        width: calc(100vw - 48px);
+      }
+    }
+  }
+
+  &__search {
+    display: none;
+    &:checked + .filter__form {
+      overflow: hidden;
+      .filter__search-input {
+        width: 100%;
+        @include breakpoint-down($breakpoint-sm-max) {
+          width: calc(100vw - 48px);
+          padding-right: 16px;
+          &:after {
+            right: 16px;
+          }
+        }
+      }
     }
   }
 
@@ -73,7 +130,6 @@
         &:active {
           background-color: transparent;
           color: $color-black;
-          // font-weight: 500;
           text-decoration-line: underline;
         }
         @include breakpoint-down($breakpoint-sm-max) {
@@ -100,6 +156,7 @@
   &__form {
     display: flex;
     margin-bottom: 0;
+    position: relative;
     @include breakpoint-down($breakpoint-sm-max) {
       order: 3;
     }

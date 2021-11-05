@@ -1,8 +1,11 @@
 .filter 
   .filter__container
-    button.filter__search(type="button")
-      +svgicon('search')
+    label.filter__search-svg(for="search-input") 
+        +svgicon('search')
+    input.filter__search(type="checkbox" name="search" id="search-input")
     form.filter__form(method="post") 
+        .filter__search-input 
+            input(type="search")
         .filter__block
             button.filter__item.filter__item--submenu.filter__item--artist(type="button") Художник
             .filter__inner.filter__inner--artists 
@@ -38,8 +41,8 @@
                     input( type="checkbox" id="artist12" name="artist" value="artist12" )
                     label( for="artist12" ) Кеша Воробьянов
                 .filter__inner__mobile-btns  
-                  button.filter__inner--reset(type="button") Сбросить
-                  button.filter__inner--show(type="button") Показать
+                    button.filter__inner--reset(type="button") Сбросить
+                    button.filter__inner--show(type="button") Показать
         .filter__block
             button.filter__item.filter__item--submenu.filter__item--technics(type="button") Техника
             .filter__inner 
@@ -51,8 +54,8 @@
                     input( type="checkbox" id="technics3" name="technics" value="technics3" )
                     label( for="technics3" ) Гравюры
                 .filter__inner__mobile-btns  
-                  button.filter__inner--reset(type="button") Сбросить
-                  button.filter__inner--show(type="button") Показать
+                    button.filter__inner--reset(type="button") Сбросить
+                    button.filter__inner--show(type="button") Показать
         .filter__block
             button.filter__item.filter__item--submenu.filter__item--size(type="button") Размер
             .filter__inner 
@@ -64,22 +67,22 @@
                     input( type="checkbox" id="size3" name="size" value="size3" )
                     label( for="size3" ) Средние
                 .filter__inner__mobile-btns  
-                  button.filter__inner--reset(type="button") Сбросить
-                  button.filter__inner--show(type="button") Показать
+                    button.filter__inner--reset(type="button") Сбросить
+                    button.filter__inner--show(type="button") Показать
         .filter__block
             button.filter__item.filter__item--submenu.filter__item--price(type="button") Цена
             .filter__inner.filter__inner--price 
                 .filter__range-labels 
                     span Р 10.500
                     span Р 
-                      input( type="text" id="rangenumber" min="0" max="" value="341.642" oninput="range.value=value")
+                        input( type="text" id="rangenumber" min="0" max="" value="341.642" oninput="range.value=value")
                 input#range(type="range" min="10500" max="683284" value="50%" step="1" oninput="rangenumber.value=value")
                 .filter__inner__mobile-btns  
-                  button.filter__inner--reset(type="button") Сбросить
-                  button.filter__inner--show(type="button") Показать
+                    button.filter__inner--reset(type="button") Сбросить
+                    button.filter__inner--show(type="button") Показать
         input.filter__item.filter__item--reset.is-disabled(id="reset" type="reset") 
         label( for="reset" ) Сбросить
     button.filter__grid.sliderView(type="button")
-      +svgicon('grid')
-      +svgicon('slider')
+        +svgicon('grid')
+        +svgicon('slider')
     

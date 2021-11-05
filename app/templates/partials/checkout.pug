@@ -1,0 +1,102 @@
+.checkout 
+  .checkout__cart-block
+    .checkout__logo 
+      +svgicon('logo')
+    a.checkout__return-btn(href="javascript:history.back()") назад
+    .checkout__cart 
+      .checkout__cart-list
+        .checkout__cart-item
+          img(src="./assets/image1@1x.jpg" srcset="./assets/image1@2x.jpg x2" alt="")
+          .checkout__cart-list-link
+            span.checkout__cart-list-link-title “Ze Blooming vase” 
+            span.checkout__cart-list-link-author JEAN BAPTISTE KRUTON
+            span.tab-panes__btns-cover
+              span.checkout__cart-list-link-price £2,400
+              button.checkout__cart-list-link-del(type="button") Удалить
+        .checkout__cart-item  
+          img(src="./assets/image2@1x.jpg" srcset="./assets/image2@2x.jpg x2" alt="")
+          .checkout__cart-list-link
+            span.checkout__cart-list-link-title “Ze Blooming vase” 
+            span.checkout__cart-list-link-author JEAN BAPTISTE KRUTON
+            span.tab-panes__btns-cover
+              span.checkout__cart-list-link-price £2,400
+                span.checkout__cart-list-link-del Удалить
+        .checkout__cart-item  
+          img(src="./assets/image3@1x.jpg" srcset="./assets/image3@2x.jpg x2" alt="")
+          .checkout__cart-list-link
+            span.checkout__cart-list-link-title “Ze Blooming vase” 
+            span.checkout__cart-list-link-author JEAN BAPTISTE KRUTON
+            span.tab-panes__btns-cover
+              span.checkout__cart-list-link-price £2,400
+              span.checkout__cart-list-link-del Удалить
+        .checkout__cart-item  
+          img(src="./assets/image4@1x.jpg" srcset="./assets/image4@2x.jpg x2" alt="")
+          .checkout__cart-list-link
+            span.checkout__cart-list-link-title “Ze Blooming vase” 
+            span.checkout__cart-list-link-author JEAN BAPTISTE KRUTON
+            span.tab-panes__btns-cover
+              span.checkout__cart-list-link-price £2,400
+              span.checkout__cart-list-link-del Удалить
+      .checkout__checkout-data
+        .checkout__price 
+          span Доставка
+          span 300 ₽
+        .checkout__price 
+          span Товар
+          span 22 590 ₽
+        .checkout__final-price 
+          span Итого
+          span 22 590 ₽
+  .checkout__personal-data-block
+    h1.checkout__title Checkout
+    form.checkout__form 
+      fieldset 
+        h3.checkout__form-title Личные данные
+        .checkout__form-field.form__field
+          input.checkout__form-input( type="text" id="name" )
+          label.checkout__form-label.checkout__form-label--flow( for="name" ) ИМЯ
+        .checkout__form-field.form__field
+          input.checkout__form-input( type="text" id="surname" )
+          label.checkout__form-label.checkout__form-label--flow( for="surname" ) ФАМИЛИЯ
+        .checkout__form-field.form__field
+          input.checkout__form-input( type="tel" id="tel" )
+          label.checkout__form-label.checkout__form-label--flow( for="tel" ) телефон
+        .checkout__form-field.form__field
+          input.checkout__form-input( type="email" id="email" )
+          label.checkout__form-label.checkout__form-label--flow( for="email" ) мейл
+        .checkout__form-field.form__field
+          input.checkout__form-input( type="text" id="address" )
+          label.checkout__form-label.checkout__form-label--flow( for="address" ) Адрес
+        .checkout__form-field.form__field
+          input.checkout__form-input( type="text" id="zip" )
+          label.checkout__form-label.checkout__form-label--flow( for="zip" ) Почтовый индекс
+      fieldset 
+        h3.checkout__form-title Доставка
+        .checkout__radios
+          .checkout__form-field.form__field
+            input.checkout__form-input( type="radio" name="delivery" id="courier" checked)
+            label.checkout__form-label( for="courier" ) Курьером
+              span +1500Р 
+          .checkout__form-field.form__field
+            input.checkout__form-input( type="radio" name="delivery" id="pickup" )
+            label.checkout__form-label( for="pickup" ) Самовывоз
+      fieldset 
+        h3.checkout__form-title Оплата
+        .checkout__radios
+          .checkout__form-field.form__field
+            input.checkout__form-input( type="radio" name="payment" id="bank" checked)
+            label.checkout__form-label( for="bank" ) Банковской картой 
+          .checkout__form-field.form__field
+            input.checkout__form-input( type="radio" name="payment" id="cash" )
+            label.checkout__form-label( for="cash" ) Наличными курьеру
+          .checkout__form-field.form__field
+            input.checkout__form-input( type="radio" name="payment" id="card" )
+            label.checkout__form-label( for="card" ) Картой курьеру
+      fieldset
+        .form__field
+          input.checkout__form-input( type="checkbox" name="payment" id="subscribe" )
+          label.checkout__form-label( for="subscribe" ) Я готов получать всякие оповещения и предложения 
+        .form__field
+          input.checkout__form-input( type="checkbox" name="payment" id="terms" )
+          label.checkout__form-label( for="terms" ) Я соглашаюсь с Terms & Conditions
+      input(type="submit" value="Оформить заказ") 
