@@ -3,9 +3,10 @@
     label.filter__search-svg(for="search-input") 
         +svgicon('search')
     input.filter__search(type="checkbox" name="search" id="search-input")
+    .filter__search-input 
+        input(type="search")
     form.filter__form(method="post") 
-        .filter__search-input 
-            input(type="search")
+        
         .filter__block
             button.filter__item.filter__item--submenu.filter__item--artist(type="button") Художник
             .filter__inner.filter__inner--artists 

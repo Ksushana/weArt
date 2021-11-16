@@ -43,8 +43,8 @@
     width: 0px;
     position: absolute;
     transition: width $transition-duration;
-    height: 100%;
-    left: 0;
+    height: 54px;
+    left: 32px;
     background-color: #f4f0ed;
     z-index: 100;
     display: flex;
@@ -78,10 +78,11 @@
 
   &__search {
     display: none;
-    &:checked + .filter__form {
+    &:checked + {
       overflow: hidden;
       .filter__search-input {
-        width: 100%;
+        width: 515px;
+
         @include breakpoint-down($breakpoint-sm-max) {
           width: calc(100vw - 48px);
           padding-right: 16px;
