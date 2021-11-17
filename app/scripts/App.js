@@ -29,7 +29,7 @@ import input from "./modules/input-label";
 
 const App = {
   init() {
-    console.log("App init");
+    // console.log("App init");
   },
 };
 
