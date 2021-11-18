@@ -151,6 +151,7 @@
       .filter__inner {
         opacity: 1;
         pointer-events: initial;
+        z-index: 200;
       }
     }
   }
