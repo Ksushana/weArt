@@ -2,25 +2,22 @@
   background-color: $color-burgundy;
   margin-top: auto;
   color: $color-scarlet;
-  font-family: $font-family-murmure;
   font-weight: 600;
-  font-size: 62px;
+  font-size: 25px;
   line-height: 101%;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  font-feature-settings: 'liga' off, 'kern' off;
+  font-feature-settings: "liga" off, "kern" off;
   padding-top: 110px;
   padding-bottom: 50px;
   @include breakpoint-down($breakpoint-lg-max) {
-    font-size: 40px;
+    font-size: 20px;
   }
   @include breakpoint-down($breakpoint-md-max) {
-    font-size: 32px;
+    font-size: 12px;
     line-height: 101.11%;
   }
-  @include breakpoint-down($breakpoint-sm-max) {
-    padding-top: 25px;
-  }
+
   &__container {
     display: flex;
     align-items: center;
@@ -42,19 +39,18 @@
   &__title {
     margin: 0;
     font-weight: 600;
-  font-size: 62px;
-  line-height: 101%;
-  @include breakpoint-down($breakpoint-sm-max) {
-    font-size: 32px;
-    line-height: 101.11%;
-  }
-  
+    font-size: 45px;
+    line-height: 101%;
+    @include breakpoint-down($breakpoint-sm-max) {
+      font-size: 30px;
+      line-height: 101.11%;
+    }
   }
   &__block {
     width: 50%;
     @include breakpoint-down($breakpoint-md-max) {
       width: 100%;
-      margin-bottom: 22px
+      margin-bottom: 22px;
     }
   }
 }

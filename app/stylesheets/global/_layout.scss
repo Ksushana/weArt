@@ -15,6 +15,84 @@ body {
   flex-direction: column;
   overflow-x: hidden;
   background-color: $color-eggshell;
+
+  &.is-antique {
+    .authors__name {
+      font-family: $font-family-murmure;
+      font-size: 55px;
+    }
+    .checkout {
+      &-author {
+        font-family: $font-family-murmure;
+        font-size: 30px;
+        @include breakpoint-down($breakpoint-md-max) {
+          font-size: 30px;
+        }
+      }
+      &__title {
+        font-family: $font-family-murmure;
+        font-size: 100px;
+        @include breakpoint-down($breakpoint-md-max) {
+          font-size: 44px;
+        }
+      }
+      &__form-title {
+        font-family: $font-family-murmure;
+        font-size: 44px;
+        @include breakpoint-down($breakpoint-md-max) {
+          font-size: 28px;
+        }
+      }
+    }
+    .footer {
+      font-family: $font-family-murmure;
+      font-size: 62px;
+      @include breakpoint-down($breakpoint-lg-max) {
+        font-size: 40px;
+      }
+      @include breakpoint-down($breakpoint-md-max) {
+        font-size: 32px;
+        line-height: 101.11%;
+      }
+      @include breakpoint-down($breakpoint-sm-max) {
+        padding-top: 25px;
+      }
+      &__title {
+        font-size: 62px;
+        @include breakpoint-down($breakpoint-sm-max) {
+          font-size: 32px;
+        }
+      }
+    }
+    .header {
+      font-family: $font-family-murmure;
+      &__menu-item {
+        font-size: 30px;
+        line-height: 30px;
+        @include breakpoint-down(360px) {
+          font-size: 30px;
+          line-height: 30px;
+        }
+      }
+    }
+    .item {
+      &-title {
+        font-family: $font-family-murmure;
+        @include breakpoint-down($breakpoint-sm-max) {
+          font-size: 44px;
+        }
+      }
+    }
+    .main-content {
+      &__tab-link {
+        font-family: $font-family-murmure;
+        font-size: 100px;
+        @include breakpoint-down($breakpoint-sm-max) {
+          font-size: 44px;
+        }
+      }
+    }
+  }
 }
 
 .visually-hidden {
