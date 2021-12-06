@@ -92,6 +92,13 @@ body {
         }
       }
     }
+    .tab-panes__list-link-author {
+      font-family: $font-family-murmure;
+      font-size: 50px;
+      @include breakpoint-down($breakpoint-sm-max) {
+        font-size: 30px;
+      }
+    }
   }
 }
 

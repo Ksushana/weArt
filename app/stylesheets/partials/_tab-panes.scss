@@ -79,9 +79,8 @@
       }
     }
     &-author {
-      font-family: $font-family-murmure;
       font-weight: 600;
-      font-size: 50px;
+      font-size: 40px;
       line-height: 101.11%;
       letter-spacing: 0.02em;
       text-transform: uppercase;
@@ -89,7 +88,7 @@
       padding-right: 100px;
       @include breakpoint-down($breakpoint-sm-max) {
         padding-right: 0;
-        font-size: 30px;
+        font-size: 20px;
         width: 100%;
       }
     }
