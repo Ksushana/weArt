@@ -21,6 +21,7 @@ body {
       font-family: $font-family-murmure;
       font-size: 55px;
     }
+
     .checkout {
       &-author {
         font-family: $font-family-murmure;
@@ -76,8 +77,9 @@ body {
       }
     }
     .item {
-      &-title {
+      &__description-title {
         font-family: $font-family-murmure;
+        font-size: 50px;
         @include breakpoint-down($breakpoint-sm-max) {
           font-size: 44px;
         }
