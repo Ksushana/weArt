@@ -1,0 +1,58 @@
+.main-content__container.container
+    .project-item 
+        .project-item__title последний миг крутона - ретроспектив 2022
+        .project-item__img 
+            img(src="./assets/projects/project2@1x.png" srcset="./assets/projects/project2@2x.png x2" alt="")
+        .project-item__data 
+            .project-item__notification 
+                .project-item__notification-top 
+                    .project-item__notification-row
+                        .project-item__notification-title Место
+                        .project-item__notification-data Prada Gallery, Milano
+                    .project-item__notification-row
+                        .project-item__notification-title Дата и время
+                        .project-item__notification-data  12 июля 2022, 20:45
+                    .project-item__notification-row
+                        .project-item__notification-title Whatever
+                        .project-item__notification-data  information
+                .project-item__notification-bottom
+                    button.project-item__notification-button(type="button") Отправить напоминание 
+            .project-item__description 
+                h3.project-item__description-title Как прожил жизнь крутон и что дальше?
+                p.project-item__description-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
+                p.project-item__description-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+        .project-item__slider
+            .swiper.project-item__slider-inner
+                .swiper-wrapper
+                    .swiper-slide
+                        .swiper-slide--video
+                          button(type="button")
+                            +svgicon('play')
+                        img(src="./assets/projects/video.png" srcset="./assets/projects/video.png x2" alt="")
+                    .swiper-slide
+                        img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+            .project-item__slider-prev.project-item__slider-btn.swiper-button-prev
+              +svgicon('left')
+            .project-item__slider-next.project-item__slider-btn.swiper-button-next
+              +svgicon('right')
+        //- .item__more-works 
+        //-     p.item__more-title Работы Жана Бабтиста Крутона
+        //-     .swiper.item__more-list
+        //-         .swiper-wrapper
+        //-             .swiper-slide.item__more-list-item 
+        //-                 img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+        //-                 a.item__more-list-item-link(href="./item.html")
+        //-             .swiper-slide.item__more-list-item 
+        //-                 img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+        //-                 a.item__more-list-item-link(href="./item.html")
+        //-             .swiper-slide.item__more-list-item 
+        //-                 img(src="./assets/image6@1x.jpg" srcset="./assets/image6@2x.jpg x2" alt="")
+        //-                 a.item__more-list-item-link(href="./item.html")
+        //-             .swiper-slide.item__more-list-item 
+        //-                 img(src="./assets/image1@1x.jpg" srcset="./assets/image1@2x.jpg x2" alt="")
+        //-                 a.item__more-list-item-link(href="./item.html")
+        //-         .item__more-swiper-container.container
+        //-             .swiper-button-prev.item__more__button-prev
+        //-             .swiper-button-next.item__more__button-next
+
+        include ./partners.pug

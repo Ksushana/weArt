@@ -123,6 +123,9 @@
     &:active {
       background-color: $color-white;
     }
+    label {
+      white-space: nowrap;
+    }
     &--reset {
       display: none;
       & + label {
@@ -284,6 +287,7 @@
       position: relative;
       padding-left: 40px;
       margin-bottom: 13px;
+      white-space: nowrap;
       &:last-child {
         margin-bottom: 0;
       }

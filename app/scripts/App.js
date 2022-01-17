@@ -18,6 +18,7 @@ import menu from "./modules/menu";
 import filter from "./modules/filter-mobile";
 import range from "./modules/range";
 import input from "./modules/input-label";
+import slider from "./modules/project-slider";
 
 /*========================================
 // Run Application

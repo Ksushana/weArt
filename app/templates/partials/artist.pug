@@ -1,0 +1,30 @@
+.main-content__container.container
+  .item
+    .item__artist 
+      .item__artist-img 
+        img(src="./assets/authors/kruton@1x.jpg" srcset="./assets/authors/kruton@2x.jpg x2" alt="")
+      .item__artist-data 
+        .item__artist-name JEAN BAPTISTE KRUTON
+        .item__artist-desc Жан Баптист Крутон ( Jean-Baptiste Carpeaux; 11 мая 1827 — 12 октября 1875 гг. ) — знаменитый французский художник XIX века, выдающийся скульптор стиля необарокко.  Жан-Батист Карпо был также талантливым живописцем, но его картины практически не известны широкому зрителю.  Лучшие шедевры творчества мастера в наши дни украшают экспозиции французских музеев, площади и фасады парижских зданий, а его биография представляет собой наглядный пример успешной карьеры гениального художника из простой рабочей семьи.
+        button.item__artist-download(type="button") 
+          +svgicon('download') 
+          | Скачать резюме
+    .item__more-works 
+        p.item__more-title Работы Жана Бабтиста Крутона
+        .swiper.item__more-list
+            .swiper-wrapper
+                .swiper-slide.item__more-list-item 
+                    img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+                    a.item__more-list-item-link(href="./item.html")
+                .swiper-slide.item__more-list-item 
+                    img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+                    a.item__more-list-item-link(href="./item.html")
+                .swiper-slide.item__more-list-item 
+                    img(src="./assets/image6@1x.jpg" srcset="./assets/image6@2x.jpg x2" alt="")
+                    a.item__more-list-item-link(href="./item.html")
+                .swiper-slide.item__more-list-item 
+                    img(src="./assets/image1@1x.jpg" srcset="./assets/image1@2x.jpg x2" alt="")
+                    a.item__more-list-item-link(href="./item.html")
+            .item__more-swiper-container.container
+                .swiper-button-prev.item__more__button-prev
+                .swiper-button-next.item__more__button-next

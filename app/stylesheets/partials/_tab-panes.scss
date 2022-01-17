@@ -8,6 +8,11 @@
     &.is-active {
       display: block;
     }
+
+    &--full-height {
+      height: auto !important;
+    }
+
     @include breakpoint-down($breakpoint-md-max) {
       height: 500px;
       margin-bottom: 0;

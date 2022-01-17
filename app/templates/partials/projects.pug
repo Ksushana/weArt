@@ -1,83 +1,31 @@
 .main-content
   .main-content__container.container
-    .main-content__tab-links 
-      a.main-content__tab-link.js-tab-link.is-active(href="#tab-1") Работы
-      a.main-content__tab-link.js-tab-link(href="#tab-2") Авторы
-    
     .main-content__tab-panes.tab-panes
-      .tab-panes__item.is-active( id="tab-1" )
+      .tab-panes__item.tab-panes__item--full-height.is-active( id="tab-1" )
         .main-content__filter 
-          include ./filter.pug
-        .swiper.tab-panes__list
-          .swiper-wrapper
-            .swiper-slide.tab-panes__list-item 
-              img(src="./assets/image1@1x.jpg" srcset="./assets/image1@2x.jpg x2" alt="")
-              a.tab-panes__list-link(href="./item.html")
-                span.tab-panes__list-link-title “Ze Blooming vase” 
-                span.tab-panes__list-link-author JEAN BAPTISTE KRUTON
-                span.tab-panes__btns-cover
-                  span.tab-panes__list-link-price £2,400
-                  span.tab-panes__mobile-link Открыть
-            .swiper-slide.tab-panes__list-item 
-              img(src="./assets/image2@1x.jpg" srcset="./assets/image2@2x.jpg x2" alt="")
-              a.tab-panes__list-link(href="./item.html")
-                span.tab-panes__list-link-title “Ze Blooming vase” 
-                span.tab-panes__list-link-author JEAN BAPTISTE KRUTON
-                span.tab-panes__btns-cover
-                  span.tab-panes__list-link-price £2,400
-                  span.tab-panes__mobile-link Открыть
-            .swiper-slide.tab-panes__list-item 
-              img(src="./assets/image3@1x.jpg" srcset="./assets/image3@2x.jpg x2" alt="")
-              a.tab-panes__list-link(href="./item.html")
-                span.tab-panes__list-link-title “Ze Blooming vase” 
-                span.tab-panes__list-link-author JEAN BAPTISTE KRUTON
-                span.tab-panes__btns-cover
-                  span.tab-panes__list-link-price £2,400
-                  span.tab-panes__mobile-link Открыть
-            .swiper-slide.tab-panes__list-item 
-              img(src="./assets/image4@1x.jpg" srcset="./assets/image4@2x.jpg x2" alt="")
-              a.tab-panes__list-link(href="./item.html")
-                span.tab-panes__list-link-title “Ze Blooming vase” 
-                span.tab-panes__list-link-author JEAN BAPTISTE KRUTON
-                span.tab-panes__btns-cover
-                  span.tab-panes__list-link-price £2,400
-                  span.tab-panes__mobile-link Открыть
-            .swiper-slide.tab-panes__list-item 
-              img(src="./assets/image5@1x.jpg" srcset="./assets/image5@2x.jpg x2" alt="")
-              a.tab-panes__list-link(href="./item.html")
-                span.tab-panes__list-link-title “Ze Blooming vase” 
-                span.tab-panes__list-link-author JEAN BAPTISTE KRUTON
-                span.tab-panes__btns-cover
-                  span.tab-panes__list-link-price £2,400
-                  span.tab-panes__mobile-link Открыть
-            .swiper-slide.tab-panes__list-item 
-              img(src="./assets/image6@1x.jpg" srcset="./assets/image6@2x.jpg x2" alt="")
-              a.tab-panes__list-link(href="./item.html")
-                span.tab-panes__list-link-title “Ze Blooming vase” 
-                span.tab-panes__list-link-author JEAN BAPTISTE KRUTON
-                span.tab-panes__btns-cover
-                  span.tab-panes__list-link-price £2,400
-                  span.tab-panes__mobile-link Открыть
-            .swiper-slide.tab-panes__list-item 
-              img(src="./assets/image7@1x.jpg" srcset="./assets/image7@2x.jpg x2" alt="")
-              a.tab-panes__list-link(href="./item.html")
-                span.tab-panes__list-link-title “Ze Blooming vase” 
-                span.tab-panes__list-link-author JEAN BAPTISTE KRUTON
-                span.tab-panes__btns-cover
-                  span.tab-panes__list-link-price £2,400
-                  span.tab-panes__mobile-link Открыть
-            .swiper-slide.tab-panes__list-item 
-              img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
-              a.tab-panes__list-link(href="./item.html")
-                span.tab-panes__list-link-title “Ze Blooming vase” 
-                span.tab-panes__list-link-author JEAN BAPTISTE KRUTON
-                span.tab-panes__btns-cover
-                  span.tab-panes__list-link-price £2,400
-                  span.tab-panes__mobile-link Открыть
-          .tab-panes__swiper-container.container
-            .swiper-button-prev.tab-panes__button-prev
-            .swiper-button-next.tab-panes__button-next
-            .tab-panes__button-upload
+          include ./filter-radio-2.pug
+        .tab-panes__list
+          .projects 
+            .projects__item 
+              img(src="./assets/projects/project1@1x.png" srcset="./assets/projects/project1@2x.png x2" alt="")
+              a.projects__link(href="./project-item.html")
+                span.projects__link-title-block   
+                  span.projects__link-header Выставка
+                  span.projects__link-title иконы александра липницкого
+                span.projects__link-data   
+                  span.projects__label Prada Gallery, Milano
+                  span.projects__label 24.12.21
+
+            .projects__item 
+              img(src="./assets/projects/project2@1x.png" srcset="./assets/projects/project2@2x.png x2" alt="")
+              a.projects__link(href="./project-item.html")
+                span.projects__link-title-block   
+                  span.projects__link-header Выставка
+                  span.projects__link-title последний миг крутона - ретроспектив
+                span.projects__link-data   
+                  span.projects__label Prada Gallery, Milano
+                  span.projects__label 24.12.21
+              
       .tab-panes__item.tab-panes__authors( id="tab-2" )
         .main-content__filter 
           include ./filter-radio.pug

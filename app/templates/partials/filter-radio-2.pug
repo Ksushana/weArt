@@ -1,0 +1,22 @@
+.filter.filter--author
+  .filter__container
+    label.filter__search-svg(for="search-input") 
+        +svgicon('search')
+    input.filter__search(type="checkbox" name="search" id="search-input")
+    .filter__search-input 
+        input(type="search")
+        .filter__search-close
+    form.filter__form(method="post") 
+        .filter__search-input 
+            input(type="search")
+        .filter__item
+            input(type="radio" name="project-tab" value="" id="project-all")
+            label(for="project-all") Все
+        .filter__item
+            input(type="radio" name="project-tab" value="" id="project-photo")
+            label(for="project-photo") Категория 1
+        .filter__item
+            input(type="radio" name="project-tab" value="" id="project-artist")
+            label(for="project-artist") Категория 2
+        input.filter__item.filter__item--reset(id="reset" type="reset") 
+        label( for="reset" ) Сбросить
