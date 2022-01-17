@@ -27,6 +27,7 @@
     display: flex;
     margin-bottom: 100px;
     justify-content: space-between;
+    align-items: flex-start;
     @include breakpoint-down($breakpoint-md-max) {
       flex-direction: column-reverse;
     }
@@ -36,17 +37,23 @@
   }
   &__buy {
     width: 31.2%;
+    min-width: 461px;
     flex-shrink: 0;
+    background: #ffffff;
+    border-radius: 11px;
+    padding: 24px;
+    margin-right: 40px;
     @include breakpoint-down($breakpoint-md-max) {
       width: 100%;
+      min-width: unset;
     }
   }
-  &__price-block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 413px;
-  }
+  // &__price-block {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+  //   max-width: 413px;
+  // }
   &__price {
     font-weight: normal;
     font-size: 20px;
@@ -82,15 +89,17 @@
       }
     }
     &-title {
-      font-weight: 600;
-      font-size: 30px;
+      font-family: $font-family-murmure;
+      font-weight: 500;
+      font-size: 50px;
       line-height: 101.11%;
       letter-spacing: 0.02em;
       text-transform: uppercase;
+      font-feature-settings: 'liga' off, 'kern' off;
       margin: 0 0 20px;
 
       @include breakpoint-down($breakpoint-sm-max) {
-        font-size: 22px;
+        font-size: 44px;
       }
     }
     &-text {
@@ -106,15 +115,30 @@
   }
   &__specification {
     margin-bottom: 12px;
-    @include breakpoint-down($breakpoint-sm-max) {
+    border-bottom: 2px solid rgba(8, 8, 8, 0.1);
+
+    &-row {
       display: flex;
-      overflow: scroll;
-      margin: 0 -16px 8px;
-      padding: 0 16px;
-      &::-webkit-scrollbar {
-        display: none;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      font-size: 18px;
+      line-height: 26px;
+      color: #002710;
+
+      @include breakpoint-down($breakpoint-sm-max) {
+        font-size: 14px;
+        line-height: 20px;
       }
     }
+
+    &-title {
+      color: rgba(0, 39, 16, 0.5);
+      padding-right: 20px;
+      @include breakpoint-down($breakpoint-sm-max) {
+        padding-right: 15px;
+      }
+    }
+
   }
   &__specification-item {
     display: inline-block;
@@ -135,14 +159,10 @@
     }
   }
   &__price-block {
-    background: #ffffff;
-    border-radius: 11px;
-    padding: 24px;
     display: flex;
     justify-content: space-between;
-    @include breakpoint-down($breakpoint-sm-max) {
-      padding: 20px;
-    }
+    align-items: center;
+    padding-top: 24px;
   }
   &__buy-btn {
     color: #ffffff;
@@ -236,14 +256,12 @@
 
     @include breakpoint-down($breakpoint-sm-max) {
       flex-direction: column;
-      padding-bottom: 60px;
     }
 
     &-data {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
     }
 
     &-img {
@@ -271,11 +289,7 @@
       letter-spacing: 0.02em;
       text-transform: uppercase;
       margin-bottom: 19px;
-
-      @include breakpoint-down($breakpoint-sm-max) {
-        font-size: 44px;
-        line-height: 101.11%;
-      }
+      
     }
 
     &-desc {
@@ -298,7 +312,7 @@
       display: flex;
       align-items: center;
       font-weight: bold;
-      // width: 168px;
+
       .svg-icon {
         width: 20px;
         height: 24px;

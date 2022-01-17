@@ -13,7 +13,6 @@
       margin: auto;
       overflow: hidden;
       width: 100%;
-      height: 100%;
       &:before {
         content: "";
         padding-top: 130%;
@@ -24,7 +23,7 @@
       width: 50%;
       margin: 0;
     }
-    @include breakpoint-down($breakpoint-xs-max) {
+    @include breakpoint-down( $breakpoint-xs-max) {
       width: 100%;
       padding-bottom: 0;
     }

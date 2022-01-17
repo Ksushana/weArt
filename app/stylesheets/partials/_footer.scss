@@ -2,8 +2,9 @@
   background-color: $color-burgundy;
   margin-top: auto;
   color: $color-scarlet;
+  font-family: $font-family-murmure;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 62px;
   line-height: 101%;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -11,11 +12,15 @@
   padding-top: 110px;
   padding-bottom: 50px;
   @include breakpoint-down($breakpoint-lg-max) {
-    font-size: 20px;
+    font-size: 40px;
   }
   @include breakpoint-down($breakpoint-md-max) {
-    font-size: 12px;
+    font-size: 32px;
     line-height: 101.11%;
+  }
+
+  @include breakpoint-down($breakpoint-sm-max) {
+    padding-top: 25px;
   }
 
   &__container {
@@ -39,10 +44,10 @@
   &__title {
     margin: 0;
     font-weight: 600;
-    font-size: 45px;
+    font-size: 62px;
     line-height: 101%;
     @include breakpoint-down($breakpoint-sm-max) {
-      font-size: 30px;
+      font-size: 32px;
       line-height: 101.11%;
     }
   }

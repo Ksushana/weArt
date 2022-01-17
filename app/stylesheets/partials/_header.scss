@@ -1,4 +1,5 @@
 .header {
+  font-family: $font-family-murmure;
   &__container {
     display: flex;
     padding-top: 32px;
@@ -61,8 +62,8 @@
     }
   }
   &__menu-item {
-    font-size: 25px;
-    line-height: 25px;
+    font-size: 30px;
+    line-height: 30px;
     text-align: center;
     letter-spacing: 0.02em;
     padding: 9px 10px 6px;
@@ -72,10 +73,7 @@
     display: flex;
     align-items: center;
     height: 54px;
-    @include breakpoint-down(360px) {
-      font-size: 18px;
-      line-height: 18px;
-    }
+    
     span {
       color: $color-base;
       transition: color $transition-duration;

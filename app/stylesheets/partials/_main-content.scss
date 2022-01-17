@@ -9,20 +9,21 @@
     padding-bottom: 60px;
   }
   &__tab-link {
-    font-weight: 600;
-    font-size: 60px;
-    line-height: 101.11%;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    font-feature-settings: "liga" off, "kern" off;
-    position: relative;
-    margin-right: 33px;
-    &:last-child {
-      margin-right: 0;
-    }
-    @include breakpoint-down($breakpoint-sm-max) {
-      font-size: 22px;
-      margin-right: 20px;
+      font-family: $font-family-murmure;
+      font-weight: 600;
+      font-size: 100px;
+      line-height: 101.11%;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      font-feature-settings: 'liga' off, 'kern' off;
+      position: relative;
+      margin-right: 33px;
+      &:last-child {
+          margin-right: 0;
+      }
+      @include breakpoint-down($breakpoint-sm-max) {
+        font-size: 44px;
+        margin-right: 20px;
     }
     &.is-active {
       &:after {
