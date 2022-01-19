@@ -48,12 +48,7 @@
       min-width: unset;
     }
   }
-  // &__price-block {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: space-between;
-  //   max-width: 413px;
-  // }
+  
   &__price {
     font-weight: normal;
     font-size: 20px;
@@ -185,6 +180,9 @@
   }
   &__more-works {
     border-top: 2px solid rgba(8, 8, 8, 0.1);
+    position: relative;
+    padding-bottom: 74px;
+
   }
   &__more-title {
     color: $color-blood;
@@ -202,6 +200,16 @@
     @include breakpoint-down($breakpoint-lg-max) {
       height: 481px;
     }
+
+    @include breakpoint-down($breakpoint-sm-max) {
+      height: 100%;
+      width: 100%;
+      .swiper-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
   &__more-list-item {
     position: relative;
@@ -210,6 +218,18 @@
       height: 100%;
       width: auto;
     }
+
+    @include breakpoint-down($breakpoint-sm-max) {
+      width: 100%;
+      height: auto;
+      margin-bottom: 12px;
+      margin-right: 0!important;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
   &__more-list-item-link {
     position: absolute;
@@ -217,6 +237,77 @@
     left: 0;
     right: 0;
     bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 36px;
+    opacity: 0;
+    transition: opacity $transition-duration, background-color $transition-duration;
+    background-color: transparent;
+
+    &:hover {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    @include breakpoint-down($breakpoint-sm-max) {
+      opacity: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding: 12px;
+    }
+
+    &-title {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 23px;
+      font-feature-settings: 'ordn' on, 'salt' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on;
+      color: $color-beige;
+      margin-bottom: 8px;
+
+      @include breakpoint-down($breakpoint-sm-max) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    &-author {
+      font-family: $font-family-murmure;
+      font-weight: 500;
+      font-size: 50px;
+      line-height: 101.11%;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      font-feature-settings: 'liga' off, 'kern' off;
+      color: #FBD0B1;
+      padding-right: 12px;
+
+      @include breakpoint-down($breakpoint-sm-max) {
+        font-size: 40px;
+      }
+    }
+
+    &-price {
+      background: rgba(146, 146, 146, 0.2);
+      backdrop-filter: blur(80px);
+      border-radius: 12px;
+      padding: 11px 14px 9px;
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    &-cover {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: -10px;
+
+      @include breakpoint-down($breakpoint-sm-max) {
+        margin-bottom: 8px;
+      }
+    }
   }
 
   &__more-swiper-container {
@@ -262,6 +353,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: flex-start;
     }
 
     &-img {
@@ -289,15 +381,17 @@
       letter-spacing: 0.02em;
       text-transform: uppercase;
       margin-bottom: 19px;
-      
+      padding-top: 36px;
     }
 
     &-desc {
       margin-bottom: 19px;
+      padding-right: 90px;
 
       @include breakpoint-down($breakpoint-md-max) {
         font-size: 16px;
         line-height: 22px;
+        padding-right: 0;
       }
     }
 
@@ -319,5 +413,35 @@
         margin-right: 4px;
       }
     }
+  }
+
+  &__tab-links {
+    display: none;
+    @include breakpoint-down($breakpoint-sm-max) {
+      display: flex;
+      padding-top: 20px;
+      border-top: 2px solid rgba(8, 8, 8, 0.1);
+    }
+  }
+
+  &__tabs {
+    @include breakpoint-down($breakpoint-sm-max) {
+    .item__more-works {
+        padding-top: 24px;
+        border-top: none;
+      }
+
+    .item__more-title {
+      display: none;
+    }
+
+    .item__more-works.js-artist-tab-pane {
+      display: none;
+
+      &.is-active {
+        display: flex;
+      }
+    }
+  }
   }
 }

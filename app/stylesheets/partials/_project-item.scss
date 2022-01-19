@@ -120,8 +120,8 @@
 
   &__slider {
     width: 100%;
-    position: relative;
     margin-bottom: 90px;
+    position: relative;
 
     @include breakpoint-down($breakpoint-md-max) {
       margin-bottom: 40px;

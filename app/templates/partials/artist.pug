@@ -9,22 +9,70 @@
         button.item__artist-download(type="button") 
           +svgicon('download') 
           | Скачать резюме
-    .item__more-works 
+    .item__tab-links 
+      a.main-content__tab-link.js-artist-tab-link.is-active(href="#tab-1") Работы
+      a.main-content__tab-link.js-artist-tab-link(href="#tab-2") проекты
+    .item__tabs
+      .item__more-works.js-artist-tab-pane.is-active( id="tab-1" )
         p.item__more-title Работы Жана Бабтиста Крутона
         .swiper.item__more-list
-            .swiper-wrapper
-                .swiper-slide.item__more-list-item 
-                    img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
-                    a.item__more-list-item-link(href="./item.html")
-                .swiper-slide.item__more-list-item 
-                    img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
-                    a.item__more-list-item-link(href="./item.html")
-                .swiper-slide.item__more-list-item 
-                    img(src="./assets/image6@1x.jpg" srcset="./assets/image6@2x.jpg x2" alt="")
-                    a.item__more-list-item-link(href="./item.html")
-                .swiper-slide.item__more-list-item 
-                    img(src="./assets/image1@1x.jpg" srcset="./assets/image1@2x.jpg x2" alt="")
-                    a.item__more-list-item-link(href="./item.html")
-            .item__more-swiper-container.container
-                .swiper-button-prev.item__more__button-prev
-                .swiper-button-next.item__more__button-next
+          .swiper-wrapper
+            .swiper-slide.item__more-list-item 
+              img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+              a.item__more-list-item-link(href="./item.html")
+                span.item__more-list-item-link-cover
+                  span.item__more-list-item-link-title “Ze Blooming vase” 
+                  span.item__more-list-item-link-author JEAN BAPTISTE KRUTON
+                span.item__more-list-item-link-price £2,400
+            .swiper-slide.item__more-list-item 
+              img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+              a.item__more-list-item-link(href="./item.html")
+                span.item__more-list-item-link-cover
+                  span.item__more-list-item-link-title “Ze Blooming vase” 
+                  span.item__more-list-item-link-author JEAN BAPTISTE KRUTON
+                span.item__more-list-item-link-price £2,400
+            .swiper-slide.item__more-list-item 
+                img(src="./assets/image6@1x.jpg" srcset="./assets/image6@2x.jpg x2" alt="")
+                a.item__more-list-item-link(href="./item.html")
+                  span.item__more-list-item-link-cover
+                    span.item__more-list-item-link-title “Ze Blooming vase” 
+                    span.item__more-list-item-link-author JEAN BAPTISTE KRUTON
+                  span.item__more-list-item-link-price £2,400
+            .swiper-slide.item__more-list-item 
+                img(src="./assets/image1@1x.jpg" srcset="./assets/image1@2x.jpg x2" alt="")
+                a.item__more-list-item-link(href="./item.html")
+                  span.item__more-list-item-link-cover
+                    span.item__more-list-item-link-title “Ze Blooming vase” 
+                    span.item__more-list-item-link-author JEAN BAPTISTE KRUTON
+                  span.item__more-list-item-link-price £2,400
+          .item__more-swiper-container.container
+              .swiper-button-prev.item__more__button-prev
+              .swiper-button-next.item__more__button-next
+          
+      .item__more-works.js-artist-tab-pane( id="tab-2" )
+        p.item__more-title Работы Жана Бабтиста Крутона
+        .swiper.projects__slider
+          .swiper-wrapper
+            .swiper-slide.projects__slider-item 
+                img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+                a.projects__slider-item-link(href="./project-item.html")
+                  span.projects__slider-item-link-title Выставка
+                  span.projects__slider-item-link-author иконы александра липницкого
+            .swiper-slide.projects__slider-item 
+                img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+                a.projects__slider-item-link(href="./project-item.html")
+                  span.projects__slider-item-link-title Ивент
+                  span.projects__slider-item-link-author последний миг крутона - ретроспектив
+            .swiper-slide.projects__slider-item 
+                img(src="./assets/image6@1x.jpg" srcset="./assets/image6@2x.jpg x2" alt="")
+                a.projects__slider-item-link(href="./project-item.html")
+                  span.projects__slider-item-link-title Ивент
+                  span.projects__slider-item-link-author последний миг крутона - ретроспектив
+            .swiper-slide.projects__slider-item 
+                img(src="./assets/image1@1x.jpg" srcset="./assets/image1@2x.jpg x2" alt="")
+                a.projects__slider-item-link(href="./project-item.html")
+                  span.projects__slider-item-link-title Ивент
+                  span.projects__slider-item-link-author последний миг крутона - ретроспектив
+          .item__more-swiper-container.container
+              .swiper-button-prev.projects-slider__button-prev
+              .swiper-button-next.projects-slider__button-next
