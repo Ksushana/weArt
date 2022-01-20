@@ -1,24 +1,42 @@
-const rangeInputs = document.querySelectorAll('input[type="range"]')
-if (rangeInputs !== null && rangeInputs.length > 0) {
+const rangeInput = document.querySelector('#rangenumber')
+const filters = document.querySelectorAll('.filter__inner');
+import noUiSlider from 'nouislider';
 
-  function handleInputChange(e) {
-    let target = e.target
-    if (e.target.type !== 'range') {
-      target = document.getElementById('range')
-    } 
-    const min = target.min
-    const max = target.max
-    const val = target.value
-    
-    target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%';
-    const newVal = new Intl.NumberFormat('de-DE').format(val)
-    rangenumber.value = newVal;
+if (rangeInput !== null) {
 
-  }
+  const low =  rangeInput.getAttribute("data-low")
+  const heigh =  rangeInput.getAttribute("data-heigh")
+  const min =  rangeInput.getAttribute("data-min")
+  const max =  rangeInput.getAttribute("data-max")
+  noUiSlider.create(rangeInput, {
+    start: [low, heigh],
+    connect: true,
+    range: {
+      'min': [0],
+      'max': [800000]
+    }
+  });
 
-  rangeInputs.forEach(input => {
-    input.addEventListener('input', handleInputChange)
-  })
+  const inputNumberLow = document.querySelector('.filter__inner--price-low');
+  const inputNumberHeigh = document.querySelector('.filter__inner--price-heigh');
+
+  rangeInput.noUiSlider.on('update', function (values) {
+
+    const valueLow = values[0];
+    const valueHeigh = values[1];
+    inputNumberLow.innerHTML = Math.round(valueLow).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    inputNumberHeigh.innerHTML = Math.round(valueHeigh).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
+  });
+
+
+  inputNumberLow.addEventListener('change', function () {
+      rangeInput.noUiSlider.set([this.innerHTML, null]);
+  });
+
+  inputNumberHeigh.addEventListener('change', function () {
+    rangeInput.noUiSlider.set([null, this.innerHTML]);
+    filter.classList.add("is-shown");
+});
 }
 
 

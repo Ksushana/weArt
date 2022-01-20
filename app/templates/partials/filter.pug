@@ -73,12 +73,11 @@
                     button.filter__inner--show(type="button") Показать
         .filter__block
             button.filter__item.filter__item--submenu.filter__item--price(type="button") Цена
-            .filter__inner.filter__inner--price 
-                .filter__range-labels 
-                    span Р 10.500
-                    span Р 
-                        input( type="text" id="rangenumber" min="0" max="" value="341.642" oninput="range.value=value")
-                input#range(type="range" min="10500" max="683284" value="50%" step="1" oninput="rangenumber.value=value")
+            .filter__inner.filter__inner--price
+                .filter__inner--price-cover
+                    span.filter__inner--price-low
+                    span.filter__inner--price-heigh
+                #rangenumber(data-low="200000" data-heigh="400000" data-min="50000" data-max="800000")
                 .filter__inner__mobile-btns  
                     button.filter__inner--reset(type="button") Сбросить
                     button.filter__inner--show(type="button") Показать
