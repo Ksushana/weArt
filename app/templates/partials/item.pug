@@ -1,7 +1,8 @@
 .main-content__container.container
     .item 
-        .item__img 
-            img(src="./assets/image1@1x.jpg" srcset="./assets/image1@2x.jpg x2" alt="")
+        .item__img
+            .zoom( style="background-image: url(./assets/image1@2x.jpg)" ) 
+                img(src="./assets/image1@1x.jpg" srcset="./assets/image1@2x.jpg x2" alt="")
         .item__data 
             .item__buy 
                 .item__specification 
@@ -57,5 +58,3 @@
                 .item__more-swiper-container.container
                     .swiper-button-prev.item__more__button-prev
                     .swiper-button-next.item__more__button-next
-
-        

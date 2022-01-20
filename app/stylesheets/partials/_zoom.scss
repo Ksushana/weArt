@@ -1,0 +1,15 @@
+.zoom {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: fit-content;
+  overflow: hidden;
+  margin: 0 auto;
+  cursor: zoom-in;
+  img {
+    transition: opacity .5s;
+    display: block;
+    &:hover {
+      opacity: 0;
+    }
+  }
+}

@@ -19,6 +19,7 @@ import filter from "./modules/filter-mobile";
 import range from "./modules/range";
 import input from "./modules/input-label";
 import slider from "./modules/project-slider";
+import zoom from "./modules/zoom";
 
 /*========================================
 // Run Application
