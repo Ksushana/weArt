@@ -14,7 +14,8 @@ if (imageContainer) {
   };
 
   const showImage = () => {
-    imageContainer.style.backgroundImage = 'url(' + image.src + ')';
+    const src = imageContainer.getAttribute('data-src');
+    imageContainer.style.backgroundImage = 'url(' + src + ')';
   }
 
   const hideImage = () => {
