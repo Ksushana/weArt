@@ -1,6 +1,9 @@
 const imageContainer = document.querySelector('.zoom');
+const image = document.querySelector('.zoom img');
 if (imageContainer) {
   imageContainer.onmousemove = (event) => {zoom(event)};
+  imageContainer.onmouseenter = () => {showImage()};
+  imageContainer.onmouseleave = () => {hideImage()};
   const zoom = (e) => {
     let imageZoom = e.currentTarget;
     e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX;
@@ -10,11 +13,11 @@ if (imageContainer) {
     imageZoom.style.backgroundPosition = x + '% ' + y + '%';
   };
 
-  const thumbs = document.getElementsByClassName('thumb');
-  for(var i = 0; i < thumbs.length; i++) {
-    thumbs[i].onclick = function() {
-      document.querySelector('.zoom img').src = this.src;
-      document.querySelector('.zoom').style.backgroundImage = 'url(' + this.src + ')';
-    }
-  };
+  const showImage = () => {
+    imageContainer.style.backgroundImage = 'url(' + image.src + ')';
+  }
+
+  const hideImage = () => {
+    imageContainer.style.backgroundImage = 'none';
+  }
 }
