@@ -8,13 +8,19 @@ if (rangeInput !== null) {
   const heigh =  rangeInput.getAttribute("data-heigh")
   const min =  rangeInput.getAttribute("data-min")
   const max =  rangeInput.getAttribute("data-max")
+  const step =  rangeInput.getAttribute("data-step")
+  const stepNumber = Math.floor(step);
+  const Min = Math.floor(min);
+  const Max = Math.floor(max);
   noUiSlider.create(rangeInput, {
+    step: stepNumber,
     start: [low, heigh],
     connect: true,
     range: {
-      'min': [0],
-      'max': [800000]
-    }
+      'min': Min,
+      'max': Max
+    },
+    
   });
 
   const inputNumberLow = document.querySelector('.filter__inner--price-low');
