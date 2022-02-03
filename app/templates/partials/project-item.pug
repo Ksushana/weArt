@@ -26,8 +26,10 @@
                 .swiper-wrapper
                     .swiper-slide
                         .swiper-slide--video
-                          button(type="button")
-                            +svgicon('play')
+                            button.project-item__video-btn.project-item__video-btn--play(type="button")
+                                +svgicon('play')
+                            button.project-item__video-btn.project-item__video-btn--stop(type="button")
+                                +svgicon('stop')
                         img(src="./assets/projects/video.png" srcset="./assets/projects/video.png x2" alt="")
                     .swiper-slide
                         img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")

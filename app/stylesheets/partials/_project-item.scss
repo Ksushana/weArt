@@ -141,27 +141,7 @@
       justify-content: center;
       background: linear-gradient(0deg, rgba(28, 28, 28, 0.5), rgba(28, 28, 28, 0.5));
 
-      button {
-        @include button-reset-style;
-        width: 71px;
-        height: 71px;
-        background: rgba(255, 255, 255, 0.8);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 19px 23px 12px 27px;
-        transition: transform $transition-duration;
-
-        &:hover {
-          transform: scale(1.1);
-        }
-
-        svg {
-          width: 20.75px;
-          height: 28.67px;
-        }
-      }
+      
     }
 
     .swiper-slide {
@@ -216,5 +196,40 @@
   .item__more-works {
     padding-bottom: 114px;
     border-bottom: 2px solid rgba(8, 8, 8, 0.1);
+  }
+
+  &__video-btn {
+    @include button-reset-style;
+    position: absolute;
+    width: 71px;
+    height: 71px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform $transition-duration;
+
+    &--play {
+      padding: 17px 23px 14px 27px;
+    }
+    
+    &--stop {
+      padding: 20px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    .svg-icon.svg-icon--stop {
+      width: 27px;
+      height: 27px;
+    }
+
+    .svg-icon.svg-icon--play {
+      width: 21px;
+      height: 28px;
+    }
   }
 }
