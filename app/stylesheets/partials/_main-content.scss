@@ -10,6 +10,16 @@
   }
   &__tab-links {
     margin-bottom: 40px;
+    @include breakpoint-down($breakpoint-sm-max) {
+      display: flex;
+      overflow: auto;
+      margin: 0 -16px;
+      padding: 16px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
   &__tab-link {
       font-family: $font-family-murmure;
