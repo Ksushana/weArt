@@ -7,21 +7,129 @@
     padding-bottom: 60px;
   }
   &__img {
-    display: flex;
     margin-bottom: 90px;
+    .swiper-slide {
+      max-height: 500px;
+      img {
+        margin: 0 auto;
+        max-height: 500px;
+        width: 100%;
+        object-fit: contain;
+        @include breakpoint-down($breakpoint-sm-max) {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+
+    &-slider-navigation {
+      position: relative;
+      width: 479px;
+      margin: 30px auto;
+      height: 96px;
+      @include breakpoint-down($breakpoint-md-max) {
+        width: 311px;
+        height: 46px;
+      }
+      @include breakpoint-down(350px) {
+        width: 280px;
+      }
+    }
+
+    &-slider-thumbs {
+      width: 255px;
+      margin: 0 auto;
+      overflow: hidden;
+      height: 100%;
+      position: relative;
+
+      &::before {
+        pointer-events: none;
+        position: absolute;
+        content: "";
+        width: 51px;
+        height: 100%;
+        background: linear-gradient(91.83deg, rgba(196, 196, 196, 0) 1.74%, #F4F0ED 99.92%);
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        left: 0;
+        top: 0;
+        z-index: 10;
+        @include breakpoint-down($breakpoint-md-max) {
+          width: 25px;
+        }
+      }
+      &::after {
+        pointer-events: none;
+        position: absolute;
+        content: "";
+        width: 51px;
+        height: 100%;
+        background: linear-gradient(91.83deg, rgba(196, 196, 196, 0) 1.74%, #F4F0ED 99.92%);
+        right: 0;
+        top: 0;
+        z-index: 10;
+        @include breakpoint-down($breakpoint-md-max) {
+          width: 25px;
+        }
+      }
+      @include breakpoint-down($breakpoint-md-max) {
+        width: 124.75px;
+      }
+
+      // @include breakpoint-down(350px) {
+      //   width: 110px;
+      // }
+    }
+
+    &-slider-thumb {
+      width: 77px !important;
+      height: 91px;
+      cursor: pointer;
+      @include breakpoint-down($breakpoint-md-max) {
+        width: 37.67px!important;
+        height: 46.96px;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover !important;
+        object-position: center;
+        @include breakpoint-down($breakpoint-md-max) {
+          height: 100% !important;
+          width: 100%;
+        }
+      }
+    }
+
+    &-slider-next {
+      right: 0 !important;
+      top: 40% !important;
+      background-color: white;
+      border-radius: 50%;
+      @include breakpoint-down($breakpoint-md-max) {
+        width: 40px !important;
+        height: 40px !important;
+        top: 60% !important;
+      }
+    }
+
+    &-slider-prev {
+      left: 0 !important;
+      top: 40% !important;
+      background-color: white;
+      border-radius: 50%;
+      @include breakpoint-down($breakpoint-md-max) {
+        width: 40px !important;
+        height: 40px !important;
+        top: 60% !important;
+      }
+    }
+
+
     @include breakpoint-down($breakpoint-sm-max) {
       margin-bottom: 0;
     }
-    img {
-      margin: 0 auto;
-      max-height: 771px;
-      width: 100%;
-      object-fit: contain;
-      @include breakpoint-down($breakpoint-sm-max) {
-        height: auto;
-        width: 100%;
-      }
-    }
+    
   }
   &__data {
     display: flex;
@@ -326,9 +434,9 @@
     @include breakpoint-down($breakpoint-md-max) {
       top: 40%;
     }
-    @include breakpoint-down($breakpoint-sm-max) {
-      display: none;
-    }
+    // @include breakpoint-down($breakpoint-sm-max) {
+    //   display: none;
+    // }
   }
   .swiper-button-prev {
     transform: rotate(180deg);

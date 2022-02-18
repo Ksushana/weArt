@@ -20,6 +20,7 @@ import filter from "./modules/filter-mobile";
 import range from "./modules/range";
 import input from "./modules/input-label";
 import slider from "./modules/project-slider";
+import itemslider from "./modules/item-slider";
 
 
 /*========================================

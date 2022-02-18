@@ -1,8 +1,29 @@
 .main-content__container.container
     .item 
         .item__img
-            .zoom(data-src="https://stage.weart.gallery/upload/resize_cache/iblock/a2e/5000_1542_1/qw8i0ibcvkc1w2fhwn25el3t5ui8e1kn.png" srcset="https://stage.weart.gallery/upload/resize_cache/iblock/a2e/5000_1542_1/qw8i0ibcvkc1w2fhwn25el3t5ui8e1kn.png")
-                 img(src="https://stage.weart.gallery/upload/resize_cache/iblock/a2e/5000_1542_1/qw8i0ibcvkc1w2fhwn25el3t5ui8e1kn.png" srcset="https://stage.weart.gallery/upload/resize_cache/iblock/a2e/5000_1542_1/qw8i0ibcvkc1w2fhwn25el3t5ui8e1kn.png x2" alt="")
+            .item__img-slider.swiper
+                .swiper-wrapper
+                    .swiper-slide(data-src="./assets/image8@2x.jpg")
+                        img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+                    .swiper-slide(data-src="./assets/image8@2x.jpg")
+                        img(src="./assets/image6@1x.jpg" srcset="./assets/image@2x.jpg x2" alt="")
+                    .swiper-slide(data-src="./assets/image8@2x.jpg")
+                        img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+                    .swiper-slide(data-src="./assets/image8@2x.jpg")
+                        img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+            .item__img-slider-navigation
+                .item__img-slider-thumbs.swiper(thumbsSlider="")
+                    .swiper-wrapper
+                        .swiper-slide.item__img-slider-thumb
+                            img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+                        .swiper-slide.item__img-slider-thumb
+                            img(src="./assets/image6@1x.jpg" srcset="./assets/image6@2x.jpg x2" alt="")
+                        .swiper-slide.item__img-slider-thumb
+                            img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+                        .swiper-slide.item__img-slider-thumb
+                            img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+                .swiper-button-prev.item__img-slider-prev
+                .swiper-button-next.item__img-slider-next
         .item__data 
             .item__buy 
                 .item__specification 
