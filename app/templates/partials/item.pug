@@ -1,8 +1,33 @@
 .main-content__container.container
     .item 
         .item__img
-            .zoom(data-src="https://stage.weart.gallery/upload/resize_cache/iblock/a2e/5000_1542_1/qw8i0ibcvkc1w2fhwn25el3t5ui8e1kn.png" srcset="https://stage.weart.gallery/upload/resize_cache/iblock/a2e/5000_1542_1/qw8i0ibcvkc1w2fhwn25el3t5ui8e1kn.png")
-                 img(src="https://stage.weart.gallery/upload/resize_cache/iblock/a2e/5000_1542_1/qw8i0ibcvkc1w2fhwn25el3t5ui8e1kn.png" srcset="https://stage.weart.gallery/upload/resize_cache/iblock/a2e/5000_1542_1/qw8i0ibcvkc1w2fhwn25el3t5ui8e1kn.png x2" alt="")
+            .item__img-slider.swiper
+                .swiper-wrapper
+                    .swiper-slide.zoom(data-src="./assets/image8@2x.jpg")
+                        img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+                    .swiper-slide.zoom(data-src="./assets/image6@2x.jpg")
+                        img(src="./assets/image6@1x.jpg" srcset="./assets/image@2x.jpg x2" alt="")
+                    .swiper-slide.zoom(data-src="./assets/image8@2x.jpg")
+                        img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+                    .swiper-slide.zoom(data-src="./assets/image8@2x.jpg")
+                        img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+            .item__img-slider-navigation
+                .item__img-slider-thumbs.swiper(thumbsSlider="")
+                    .swiper-wrapper
+                        .swiper-slide.item__img-slider-thumb
+                            img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+                        .swiper-slide.item__img-slider-thumb
+                            img(src="./assets/image6@1x.jpg" srcset="./assets/image6@2x.jpg x2" alt="")
+                        .swiper-slide.item__img-slider-thumb
+                            img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+                        .swiper-slide.item__img-slider-thumb
+                            img(src="./assets/image8@1x.jpg" srcset="./assets/image8@2x.jpg x2" alt="")
+                .swiper-button-prev.item__img-slider-prev
+                    svg( width="21" height="40" viewBox="0 0 21 40" fill="none" xmlns="http://www.w3.org/2000/svg" )
+                        path( d="M0.5 -1.19209e-06H7.83333L20.0333 19.0667V19.8667L8.5 40H0.5L17.0333 20.6L0.5 -1.19209e-06Z" fill="#9D0000" )
+                .swiper-button-next.item__img-slider-next
+                    svg( width="21" height="40" viewBox="0 0 21 40" fill="none" xmlns="http://www.w3.org/2000/svg" )
+                        path( d="M0.5 -1.19209e-06H7.83333L20.0333 19.0667V19.8667L8.5 40H0.5L17.0333 20.6L0.5 -1.19209e-06Z" fill="#9D0000" )
         .item__data 
             .item__buy 
                 .item__specification 
@@ -57,4 +82,8 @@
                             span.item__more-list-item-link-price £2,400
                 .item__more-swiper-container.container
                     .swiper-button-prev.item__more__button-prev
+                        svg( width="21" height="40" viewBox="0 0 21 40" fill="none" xmlns="http://www.w3.org/2000/svg" )
+                            path( d="M0.5 -1.19209e-06H7.83333L20.0333 19.0667V19.8667L8.5 40H0.5L17.0333 20.6L0.5 -1.19209e-06Z" fill="#9D0000" )
                     .swiper-button-next.item__more__button-next
+                        svg( width="21" height="40" viewBox="0 0 21 40" fill="none" xmlns="http://www.w3.org/2000/svg" )
+                            path( d="M0.5 -1.19209e-06H7.83333L20.0333 19.0667V19.8667L8.5 40H0.5L17.0333 20.6L0.5 -1.19209e-06Z" fill="#9D0000" )
