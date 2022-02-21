@@ -1,7 +1,23 @@
-import Swiper, { Navigation} from 'swiper';
-Swiper.use([Navigation]);
+import Swiper, { Navigation, Thumbs } from 'swiper';
+Swiper.use([Navigation, Thumbs]);
 
-
+const galleryThumbs = new Swiper(".item__img-slider-thumbs", {
+  spaceBetween: 12,
+  slidesPerView: 3,
+  freeMode: true,
+  centeredSlides: true,
+  watchSlidesProgress: true,
+  slideToClickedSlide: true,  
+  loop: true,
+  breakpoints: {
+    320: {
+      spaceBetween: 5
+    },
+    769: {
+      spaceBetween: 12
+    },
+  }
+}); 
 
 const galleryTop = new Swiper(".item__img-slider", {
   navigation: {
@@ -10,28 +26,11 @@ const galleryTop = new Swiper(".item__img-slider", {
   },
   spaceBetween: 24,
   slidesPerView: 1,
-  // thumbs: {
-  //   swiper: galleryThumbs,
-  // },
+  loop: true,
+  thumbs: {
+    swiper: galleryThumbs,
+  },
 }); 
 
-const galleryThumbs = new Swiper(".item__img-slider-thumbs", {
-  spaceBetween: 12,
-  slidesPerView: 3,
-  freeMode: true,
-  centeredSlides: true,
-  watchSlidesProgress: true,
-  breakpoints: {
-    320: {
-      spaceBetween: 5
-    },
-    768: {
-      spaceBetween: 12
-    },
-  }
-}); 
-
-galleryTop.params.control = galleryThumbs;
-galleryThumbs.params.control = galleryTop;
-// console.log(galleryTop);
-// console.log(galleryThumbs);
+console.log(galleryTop);
+console.log(galleryThumbs);
