@@ -145,17 +145,13 @@
     }
 
     .swiper-slide {
-      height: 510px;
-
-      @include breakpoint-down($breakpoint-md-max) {
-        height: 220px;
-      }
+      height: auto;
     }
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
 
     &-btn {
